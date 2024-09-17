@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.page {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  height: 100dvh;
+  overflow: auto;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100dvw;
+  row-gap: 1.5rem;
+  padding: 7.5vw;
+
+  @media (min-width: 1200px) {
+    position: sticky;
+    top: 0;
+    max-height: 100dvh;
+  }
+}
+
+.work {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.5vw;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

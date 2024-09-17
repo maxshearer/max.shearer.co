@@ -1,0 +1,20 @@
+.item {
+  background-color: rgba(0 0 0 / 0.033);
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  & img {
+    display: block;
+  }
+}
+
+.header {
+  padding-top: 1rem;
+  padding-inline: 1rem;
+
+  & p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(0 0 0 / 0.33);
+  }
+}
