@@ -106,16 +106,16 @@ export default function Home() {
           <nav className={styles.nav}>
             <ul>
               <li>
-                <Link href="/resume">Resume</Link>
+                <Link href="/resume">📄&nbsp; Resume</Link>
               </li>
               <li>
-                <button>Say hello</button>
+                <button>👋&nbsp; Say hello</button>
               </li>
               <li>
                 <Link href="https://x.com/maxshearer">
                   <svg
                     width="24"
-                    height="25"
+                    height="24"
                     viewBox="0 0 24 25"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export default function Home() {
                 <Link href="https://threads.net/shearer">
                   <svg
                     width="22"
-                    height="25"
+                    height="24"
                     viewBox="0 0 22 25"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ export default function Home() {
                 <Link href="https://github.com/maxshearer">
                   <svg
                     width="26"
-                    height="25"
+                    height="24"
                     viewBox="0 0 26 25"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
