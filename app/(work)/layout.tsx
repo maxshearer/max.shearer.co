@@ -25,15 +25,6 @@ export default function WorkLayout({
             />
           </WorkItem>
 
-          <WorkItem label="Think Shape: fashion app empowering people to buy less and buy better">
-            <Image
-              src="/think-shape.png"
-              alt="Scattered iPhone mockups displaying various screens of the Think Shape app"
-              width={1000}
-              height={600}
-            />
-          </WorkItem>
-
           <WorkItem label="Yard Poker: texas hold&rsquo;em poker app for friends">
             <Image
               src="/yard-poker.png"
