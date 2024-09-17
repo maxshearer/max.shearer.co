@@ -1,14 +1,19 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import ContactButton from "../components/contact-button";
+import OpenToWork from "../components/open-to-work";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>
-        <strong>Max Shearer</strong>—Designer and full(ish)-stack developer,
-        building <Link href="https://waywi.se">Waywise</Link> on the side.
-      </h1>
+      <div>
+        <OpenToWork />
+        <h1 className={styles.title}>
+          <strong>Max Shearer</strong>—Designer and full(ish)-stack developer,
+          building <Link href="https://waywi.se">Waywise</Link> on the side.
+        </h1>
+      </div>
+
       <p>
         I&rsquo;ve been a professional web tinkerer for over 15 years. The
         technologies I&rsquo;m having the most fun with right now are React

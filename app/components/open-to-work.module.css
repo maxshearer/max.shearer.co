@@ -1,0 +1,52 @@
+@keyframes rainbow-rotate {
+  0% {
+    background-color: oklch(0.6 0.24 60 / 0.1);
+    color: oklch(0.6 0.24 60 / 1);
+  }
+
+  16.67% {
+    background-color: oklch(0.6 0.24 120 / 0.1);
+    color: oklch(0.6 0.24 120 / 1);
+  }
+
+  33.33% {
+    background-color: oklch(0.6 0.24 180 / 0.1);
+    color: oklch(0.6 0.24 180 / 1);
+  }
+
+  50% {
+    background-color: oklch(0.6 0.24 240 / 0.1);
+    color: oklch(0.6 0.24 240 / 1);
+  }
+
+  66.67% {
+    background-color: oklch(0.6 0.24 300 / 0.1);
+    color: oklch(0.6 0.24 300 / 1);
+  }
+
+  83.33% {
+    background-color: oklch(0.6 0.24 360 / 0.1);
+    color: oklch(0.6 0.24 360 / 1);
+  }
+
+  100% {
+    background-color: oklch(0.6 0.24 60 / 0.1);
+    color: oklch(0.6 0.24 60 / 1);
+  }
+}
+
+.openToWork.openToWork {
+  animation: rainbow-rotate 60s linear infinite;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background-color: oklch(0.6 0.24 60 / 0.1);
+  color: oklch(0.6 0.24 60 / 1);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-transform: uppercase;
+}
