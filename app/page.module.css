@@ -103,13 +103,23 @@
 .rainbow {
   position: absolute;
   pointer-events: none;
-  left: -5vw;
   max-width: 100vw;
   width: 75dvw;
   height: 100dvh;
 
   & svg {
     height: 100dvh;
+  }
+
+  & div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/noise.png) repeat;
+    background-size: 40%;
+    mix-blend-mode: soft-light;
   }
 }
 
