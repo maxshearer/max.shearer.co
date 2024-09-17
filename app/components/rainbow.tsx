@@ -4,41 +4,40 @@ export default function Rainbow() {
   return (
     <div className={styles.rainbow}>
       <svg
-        width="1241"
-        height="982"
-        viewBox="0 0 1241 982"
+        viewBox="0 0 1107 982"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g filter="url(#filter0_f_0_1)">
           <circle
-            cx="154.868"
-            cy="547.939"
-            r="422"
-            transform="rotate(-52.4933 154.868 547.939)"
             className={styles.blur}
+            cx="600"
+            cy="800"
+            r="400"
+            transform="rotate(-52.4933 823.531 509.393)"
+            fill="#7686FD"
           />
         </g>
         <g className={styles.blend} filter="url(#filter1_f_0_1)">
           <circle
-            cx="417.132"
-            cy="477.061"
+            cx="1092.01"
+            cy="57.3365"
             r="422"
-            transform="rotate(-52.4933 417.132 477.061)"
+            transform="rotate(-52.4933 1092.01 57.3365)"
             fill="#AF95D6"
           />
         </g>
         <defs>
           <filter
             id="filter0_f_0_1"
-            x="-668.453"
-            y="-275.382"
+            x="0.209534"
+            y="-313.928"
             width="1646.64"
             height="1646.64"
             filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
+            color-interpolation-filters="sRGB"
           >
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -52,14 +51,14 @@ export default function Rainbow() {
           </filter>
           <filter
             id="filter1_f_0_1"
-            x="-406.19"
-            y="-346.261"
+            x="268.684"
+            y="-765.985"
             width="1646.64"
             height="1646.64"
             filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
+            color-interpolation-filters="sRGB"
           >
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
