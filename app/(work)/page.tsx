@@ -21,7 +21,7 @@ export default function Home() {
       <p>
         In my spare time I&rsquo;m building Waywise, an AI-generated travel
         guidebook for iOS to allow travellers to explore cities in a more
-        socially responsible way.
+        personal and socially responsible way.
       </p>
 
       <nav className={styles.nav}>
