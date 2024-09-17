@@ -97,8 +97,7 @@ export default function Home() {
             websites and apps for everyone from SMEs to big corps.
           </p>
           <p>
-            In my spare time I&rsquo;m building{" "}
-            <Link href="https://waywi.se">Waywise</Link>, an AI-generated travel
+            In my spare time I&rsquo;m building Waywise, an AI-generated travel
             guidebook for iOS to allow travellers to explore cities in a more
             socially responsible way.
           </p>
@@ -162,7 +161,34 @@ export default function Home() {
             </ul>
           </nav>
         </main>
-        <section className={styles.work}></section>
+
+        <section className={styles.work}>
+          <div className={styles.workItem}>
+            <div className={styles.workHeader}>
+              <p>Waywise: an AI-generated travel guidebook for iOS</p>
+            </div>
+
+            <Image
+              src="/waywise.png"
+              alt="Three mobile phone mockups with Waywise travel app displayed"
+              width={1000}
+              height={600}
+            />
+          </div>
+
+          <div className={styles.workItem}>
+            <div className={styles.workHeader}>
+              <p>Yard Poker: texas hold&rsquo;em poker app for friends</p>
+            </div>
+
+            <Image
+              src="/yard-poker.png"
+              alt="Mockup of a laptop displaying the Yard Poker web app"
+              width={1000}
+              height={600}
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

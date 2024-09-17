@@ -25,11 +25,18 @@
   row-gap: 1.5rem;
   padding: 7.5vw;
 
+  @media (min-width: 1200px) {
+  position: sticky;
+  top: 0;
+  max-height: 100dvh;
+  }
+
   & p {
     font-size: 1.1rem;
     line-height: 1.4;
     font-weight: 500;
     letter-spacing: 0.01em;
+    text-wrap: balance;
   }
 }
 
@@ -101,7 +108,35 @@
 }
 
 .work {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5vw;
 
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.workItem {
+  background-color: rgba(0 0 0 / 0.033);
+  border-radius: 0.75rem;
+
+  & img {
+    display: block;
+  }
+}
+
+.workHeader {
+  padding-top: 1.5rem;
+  padding-inline: 1.5rem;
+
+  & p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(0 0 0 / 0.33);
+  }
 }
 
 
