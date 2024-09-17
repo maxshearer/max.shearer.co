@@ -108,14 +108,21 @@
 }
 
 .work {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.5rem;
   padding: 2.5vw;
 
   & img {
     width: 100%;
     height: auto;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -129,8 +136,8 @@
 }
 
 .workHeader {
-  padding-top: 1.5rem;
-  padding-inline: 1.5rem;
+  padding-top: 1rem;
+  padding-inline: 1rem;
 
   & p {
     font-size: 0.75rem;

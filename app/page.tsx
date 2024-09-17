@@ -188,6 +188,38 @@ export default function Home() {
               height={600}
             />
           </div>
+
+          <div className={styles.workItem}>
+            <div className={styles.workHeader}>
+              <p>
+                Think Shape: fashion app empowering people to buy less and buy
+                better
+              </p>
+            </div>
+
+            <Image
+              src="/think-shape.png"
+              alt="Scattered iPhone mockups displaying various screens of the Think Shape app"
+              width={1000}
+              height={600}
+            />
+          </div>
+
+          <div className={styles.workItem}>
+            <div className={styles.workHeader}>
+              <p>
+                Rest Easy Radio for Premier Inn: 24-hour restful sounds from the
+                British countryside
+              </p>
+            </div>
+
+            <Image
+              src="/premier-inn.png"
+              alt="Mockup of a laptop displaying the Premier Inn Rest Easy Radio website"
+              width={1000}
+              height={600}
+            />
+          </div>
         </section>
       </div>
     </div>
