@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import ContactButton from "../components/contact-button";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <button>👋&nbsp; Say hello</button>
+            <ContactButton />
           </li>
           <li>
             <Link href="https://x.com/maxshearer">
