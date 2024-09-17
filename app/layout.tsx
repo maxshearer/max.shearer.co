@@ -25,6 +25,13 @@ export const metadata: Metadata = {
   title: "Max Shearer - Designer and full(ish)-stack developer",
   description:
     "Professional web tinkerer for over 15 years. Having fun with React Native, Go, Supabase and all the other general AI goodies that are in vogue at the moment.",
+  openGraph: {
+    images: ["/facebook.png"],
+  },
+  twitter: {
+    images: ["/twitter.png"],
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
