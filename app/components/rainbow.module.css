@@ -87,7 +87,7 @@
 
 .blend {
   transform: translateX(30dvw) translateY(30dvw) rotate(-20deg);
-  width: 20dvh;
+  width: 80dvh;
   height: 40dvh;
   border-radius: 100%;
   background-color: oklch(0.88 0.17 85.89);
