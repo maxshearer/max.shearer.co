@@ -30,7 +30,7 @@
   & dd {
     display: inline;
     font-size: 0.875rem;
-    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 
   & dt::after {
@@ -39,7 +39,7 @@
 
   & dt span {
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.05em;
     opacity: 0.875;
   }
 
@@ -53,6 +53,7 @@
 
   & li {
     display: inline;
+    letter-spacing: 0.01em;
   }
 
   & li:not(:last-child)::after {
@@ -65,4 +66,8 @@
   align-items: center;
   gap: 0.5rem;
   margin-left: -1.5rem;
+
+  & a {
+    font-weight: 700;
+  }
 }

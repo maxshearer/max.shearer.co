@@ -29,6 +29,7 @@ body {
   font-family: var(--font-inter-display);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on, "ss02" on;
 }
 
 * {
