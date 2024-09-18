@@ -1,47 +1,96 @@
+@keyframes dot-pulse {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes background-color-rotate {
+  0% {
+    background-color: oklch(0.6 0.24 300 / 1);
+  }
+
+  20% {
+    background-color: oklch(0.6 0.24 350 / 1);
+  }
+
+  40% {
+    background-color: oklch(0.6 0.24 10 / 1);
+  }
+
+  60% {
+    background-color: oklch(0.6 0.24 280 / 1);
+  }
+
+  80% {
+    background-color: oklch(0.6 0.24 300 / 1);
+  }
+
+  100% {
+    background-color: oklch(0.6 0.24 330 / 1);
+  }
+}
+
 @keyframes color-rotate {
   0% {
-    border-color: oklch(0.6 0.24 300 / 0.1);
+    background-color: oklch(0.6 0.24 300 / 0.1);
     color: oklch(0.6 0.24 300 / 1);
   }
 
   20% {
-    border-color: oklch(0.6 0.24 350 / 0.1);
+    background-color: oklch(0.6 0.24 350 / 0.1);
     color: oklch(0.6 0.24 350 / 1);
   }
 
   40% {
-    border-color: oklch(0.6 0.24 10 / 0.1);
+    background-color: oklch(0.6 0.24 10 / 0.1);
     color: oklch(0.6 0.24 10 / 1);
   }
 
   60% {
-    border-color: oklch(0.6 0.24 280 / 0.1);
+    background-color: oklch(0.6 0.24 280 / 0.1);
     color: oklch(0.6 0.24 280 / 1);
   }
 
   80% {
-    border-color: oklch(0.6 0.24 300 / 0.1);
+    background-color: oklch(0.6 0.24 300 / 0.1);
     color: oklch(0.6 0.24 300 / 1);
   }
 
   100% {
-    border-color: oklch(0.6 0.24 330 / 0.1);
+    background-color: oklch(0.6 0.24 330 / 0.1);
     color: oklch(0.6 0.24 330 / 1);
   }
 }
 
 .openToWork.openToWork {
   animation: color-rotate 60s linear infinite;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   width: fit-content;
   margin-bottom: 0.75rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.33rem 0.75rem;
   border-radius: 1rem;
-  border: 2px solid oklch(0.6 0.24 300 / 0.15);
+  background-color: oklch(0.6 0.24 300 / 0.15);
   color: oklch(0.6 0.24 300 / 1);
   font-size: 0.675rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.05em;
   color: #fff;
   text-transform: uppercase;
+
+  &::before {
+    animation: background-color-rotate 60s linear infinite,
+      dot-pulse 1.5s ease-in-out infinite alternate;
+    content: " ";
+    display: block;
+    width: 0.33rem;
+    height: 0.33rem;
+    border-radius: 50%;
+    background-color: oklch(0.6 0.24 300 / 0.15);
+  }
 }
