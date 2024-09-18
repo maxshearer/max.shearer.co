@@ -17,16 +17,13 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
   max-width: 100dvw;
-  row-gap: 1.5rem;
   padding: 7.5vw;
 
   @media (min-width: 1200px) and (min-height: 900px) {
     position: sticky;
     top: 0;
-    justify-content: center;
+    align-content: center;
     order: 2;
   }
 
