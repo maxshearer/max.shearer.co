@@ -7,12 +7,12 @@ type WorkItemProps = {
 
 export default function WorkItem(props: WorkItemProps) {
   return (
-    <div className={styles.item}>
-      <div className={styles.header}>
-        <p>{props.label}</p>
-      </div>
-
+    <figure className={styles.item}>
       {props.children}
-    </div>
+
+      <figcaption className={styles.caption}>
+        <p>{props.label}</p>
+      </figcaption>
+    </figure>
   );
 }

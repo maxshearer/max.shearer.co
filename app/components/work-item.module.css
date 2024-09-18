@@ -1,14 +1,18 @@
 .item {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(0 0 0 / 0.033);
   border-radius: 0.75rem;
   overflow: hidden;
 
   & img {
     display: block;
+    order: 2;
   }
 }
 
-.header {
+.caption {
+  order: 1;
   padding-top: 1rem;
   padding-inline: 1rem;
 
