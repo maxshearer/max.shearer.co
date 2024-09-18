@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -41,7 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interDisplay.variable}`}>{children}</body>
+      <body className={`${interDisplay.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
