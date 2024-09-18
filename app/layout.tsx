@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   description:
     "Professional web tinkerer for over 15 years. Having fun with React Native, Go, Supabase and all the other general AI goodies that are in vogue at the moment.",
   openGraph: {
-    images: ["/facebook.png"],
+    images: ["/facebook-image.png"],
   },
   twitter: {
-    images: ["/twitter.png"],
+    images: ["/twitter-image.png"],
     card: "summary_large_image",
   },
 };
