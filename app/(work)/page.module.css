@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  max-width: 75ch;
 
   & p {
     font-size: 1.1rem;
