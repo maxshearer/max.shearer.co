@@ -1,0 +1,68 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+
+  & h1,
+  & h2 {
+    font-size: 1.5rem;
+  }
+
+  & h2 {
+    margin-top: 1rem;
+  }
+
+  & dl {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & dl div {
+    display: inline;
+    padding: 0.5rem 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba(0 0 0 / 0.1);
+    }
+  }
+
+  & dt,
+  & dd {
+    display: inline;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  & dt::after {
+    content: "—";
+  }
+
+  & dt span {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.025em;
+    opacity: 0.875;
+  }
+
+  & ul {
+    display: inline;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & li {
+    display: inline;
+  }
+
+  & li:not(:last-child)::after {
+    content: ", ";
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: -1.5rem;
+}

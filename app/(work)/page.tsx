@@ -33,6 +33,9 @@ export default function Home() {
       <nav className={styles.nav}>
         <ul>
           <li>
+            <Link href="/experience">📄&nbsp; Experience</Link>
+          </li>
+          <li>
             <ContactButton />
           </li>
           <li>
