@@ -1,49 +1,44 @@
-@keyframes rainbow-rotate {
+@keyframes color-rotate {
   0% {
-    background-color: oklch(0.6 0.24 60 / 0.1);
-    color: oklch(0.6 0.24 60 / 1);
-  }
-
-  16.67% {
-    background-color: oklch(0.6 0.24 120 / 0.1);
-    color: oklch(0.6 0.24 120 / 1);
-  }
-
-  33.33% {
-    background-color: oklch(0.6 0.24 180 / 0.1);
-    color: oklch(0.6 0.24 180 / 1);
-  }
-
-  50% {
-    background-color: oklch(0.6 0.24 240 / 0.1);
-    color: oklch(0.6 0.24 240 / 1);
-  }
-
-  66.67% {
-    background-color: oklch(0.6 0.24 300 / 0.1);
+    border-color: oklch(0.6 0.24 300 / 0.1);
     color: oklch(0.6 0.24 300 / 1);
   }
 
-  83.33% {
-    background-color: oklch(0.6 0.24 360 / 0.1);
-    color: oklch(0.6 0.24 360 / 1);
+  20% {
+    border-color: oklch(0.6 0.24 350 / 0.1);
+    color: oklch(0.6 0.24 350 / 1);
+  }
+
+  40% {
+    border-color: oklch(0.6 0.24 10 / 0.1);
+    color: oklch(0.6 0.24 10 / 1);
+  }
+
+  60% {
+    border-color: oklch(0.6 0.24 280 / 0.1);
+    color: oklch(0.6 0.24 280 / 1);
+  }
+
+  80% {
+    border-color: oklch(0.6 0.24 300 / 0.1);
+    color: oklch(0.6 0.24 300 / 1);
   }
 
   100% {
-    background-color: oklch(0.6 0.24 60 / 0.1);
-    color: oklch(0.6 0.24 60 / 1);
+    border-color: oklch(0.6 0.24 330 / 0.1);
+    color: oklch(0.6 0.24 330 / 1);
   }
 }
 
 .openToWork.openToWork {
-  animation: rainbow-rotate 60s linear infinite;
+  animation: color-rotate 60s linear infinite;
   display: inline-block;
   width: fit-content;
   margin-bottom: 0.75rem;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
-  background-color: oklch(0.6 0.24 60 / 0.1);
-  color: oklch(0.6 0.24 60 / 1);
+  border: 2px solid oklch(0.6 0.24 300 / 0.15);
+  color: oklch(0.6 0.24 300 / 1);
   font-size: 0.675rem;
   font-weight: 700;
   letter-spacing: 0.05em;

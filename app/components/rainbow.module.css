@@ -1,72 +1,133 @@
-@keyframes rainbow-rotate {
+@keyframes base-rotate {
   0% {
-    fill: oklch(0.6 0.24 60);
+    background-color: oklch(0.85 0.18 330);
   }
 
-  16.67% {
-    fill: oklch(0.6 0.24 120);
+  20% {
+    background-color: oklch(0.85 0.18 350);
   }
 
-  33.33% {
-    fill: oklch(0.6 0.24 180);
+  40% {
+    background-color: oklch(0.85 0.18 10);
   }
 
-  50% {
-    fill: oklch(0.6 0.24 240);
+  60% {
+    background-color: oklch(0.85 0.18 280);
   }
 
-  66.67% {
-    fill: oklch(0.6 0.24 300);
-  }
-
-  83.33% {
-    fill: oklch(0.6 0.24 360);
+  80% {
+    background-color: oklch(0.85 0.18 300);
   }
 
   100% {
-    fill: oklch(0.6 0.24 60);
+    background-color: oklch(0.85 0.18 330);
+  }
+}
+
+@keyframes color-rotate {
+  0% {
+    background-color: oklch(0.85 0.18 200);
+  }
+
+  20% {
+    background-color: oklch(0.85 0.18 240);
+  }
+
+  40% {
+    background-color: oklch(0.85 0.18 280);
+  }
+
+  60% {
+    background-color: oklch(0.85 0.18 220);
+  }
+
+  80% {
+    background-color: oklch(0.85 0.18 160);
+  }
+
+  100% {
+    background-color: oklch(0.85 0.18 200);
   }
 }
 
 .rainbow {
   position: absolute;
   pointer-events: none;
-  right: -5vw;
-  bottom: 0;
-  width: 75dvw;
+  left: 0;
+  top: 0;
+  width: 100dvw;
   height: 100dvh;
-
-  @media (min-width: 768px) {
-    right: -25vw;
-  }
-
-  & svg {
-    width: 100%;
-    min-height: 100dvh;
-  }
-
-  & div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url(/noise.png) repeat top right;
-    background-size: 40%;
-    mix-blend-mode: soft-light;
-  }
 }
 
-.blur {
-  fill: oklch(0.6 0.24 130);
-  opacity: 0.5;
+.base,
+.color,
+.blend {
+  position: absolute;
+  filter: blur(100px);
+}
 
-  @media (min-width: 768px) {
-    fill: oklch(0.6 0.24 60);
-    animation: rainbow-rotate 60s linear infinite;
-  }
+.base {
+  animation: base-rotate 60s linear infinite;
+  transform: translateX(30dvw) translateY(-10dvh);
+  width: 90dvh;
+  height: 90dvh;
+  border-radius: 100%;
+  opacity: 0.5;
+}
+
+.color {
+  animation: color-rotate 60s linear infinite;
+  transform: translateX(30dvw) translateY(20dvw) rotate(5deg);
+  width: 70dvh;
+  height: 60dvh;
+  border-radius: 100%;
+  mix-blend-mode: color;
+  opacity: 0.6;
 }
 
 .blend {
+  transform: translateX(30dvw) translateY(30dvw) rotate(-20deg);
+  width: 20dvh;
+  height: 40dvh;
+  border-radius: 100%;
+  background-color: oklch(0.88 0.17 85.89);
   mix-blend-mode: plus-lighter;
+}
+
+.noise {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(/noise.png) repeat top right;
+  background-size: 40%;
+  mix-blend-mode: soft-light;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .base,
+  .color,
+  .blend {
+    filter: blur(150px);
+  }
+
+  .base {
+    transform: translateX(50dvw) translateY(-10dvh);
+    width: 70dvw;
+    height: 70dvw;
+  }
+
+  .color {
+    transform: translateX(50dvw) translateY(20dvw) rotate(5deg);
+    width: 60dvw;
+    height: 50dvw;
+  }
+
+  .blend {
+    transform: translateX(55dvw) translateY(20dvw) rotate(-20deg);
+    width: 20dvw;
+    height: 40dvw;
+  }
 }
