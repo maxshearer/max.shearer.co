@@ -28,10 +28,10 @@
     top: 0;
     justify-content: center;
     order: 2;
-    max-height: 100dvh;
   }
 
   @media (min-width: 1200px) {
+    max-height: 100dvh;
   }
 }
 
