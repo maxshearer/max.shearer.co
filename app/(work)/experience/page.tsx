@@ -95,12 +95,16 @@ export default function ExperiencePage(): React.ReactNode {
           <dt>Infra</dt>
           <dd>
             <ul>
-              <li>Google Cloud:</li>
-              <li>Cloud Run</li>
-              <li>Cloud Build</li>
-              <li>Cloud Functions</li>
-              <li>Cloud Storage</li>
-              <li>Stripe</li>
+              <li>
+                Google Cloud:{" "}
+                <ul>
+                  <li>Cloud Run</li>
+                  <li>Cloud Build</li>
+                  <li>Cloud Functions</li>
+                  <li>Cloud Storage</li>
+                  <li>Stripe</li>
+                </ul>
+              </li>
             </ul>
           </dd>
         </div>
