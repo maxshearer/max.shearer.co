@@ -1,13 +1,11 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import ContactButton from "../components/contact-button";
-import OpenToWork from "../components/open-to-work";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <div>
-        <OpenToWork />
         <h1 className={styles.title}>
           <strong>Max Shearer</strong>—Designer and full(ish)-stack developer,
           building <Link href="https://waywi.se">Waywise</Link> on the side.
@@ -21,8 +19,8 @@ export default function Home() {
         moment.
       </p>
       <p>
-        Day-to-day I run AFEW, a small digital studio where we build websites
-        and apps for everyone from SMEs to big corps.
+        Day-to-day I am working on design systems at OpenRent, one of the
+        largest property technology companies in the UK.
       </p>
       <p>
         In my spare time I&rsquo;m building Waywise, an AI-generated travel

@@ -14,7 +14,13 @@ export default function ExperiencePage(): React.ReactNode {
       <dl>
         <div>
           <dt>
-            <span>2016 &rarr;</span> now: AFEW, London
+            <span>2024 &rarr;</span> now: OpenRent, London
+          </dt>
+          <dd>Senior design engineer</dd>
+        </div>
+        <div>
+          <dt>
+            <span>2016 &rarr;</span> 2024: AFEW, London
           </dt>
           <dd>Co-founder, creative/technical developer</dd>
         </div>
