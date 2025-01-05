@@ -1,10 +1,12 @@
 package pages
 
-import "max.shearer.co/src/layouts"
+import "max.shearer.co/frontend/layouts"
 
 templ Index() {
 	@layouts.Default(layouts.LayoutProps{
-		Stylesheet: "index.css",
+		Stylesheets: []string{
+			"index.css",
+		},
 	}) {
 		<div class="page">
 			<div>

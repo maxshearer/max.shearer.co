@@ -154,7 +154,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: url(/public/images/noise.png) repeat top right;
+  background-image: image-set(
+    url(/static/images/noise.avif),
+    url(/static/images/noise.png)
+  );
+  background-repeat: repeat;
+  background-position: top right;
   background-size: 40%;
   mix-blend-mode: soft-light;
   opacity: 0.7;

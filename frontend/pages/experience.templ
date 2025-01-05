@@ -1,11 +1,13 @@
 package pages
 
-import "max.shearer.co/src/layouts"
+import "max.shearer.co/frontend/layouts"
 
 templ Experience() {
 	@layouts.Default(layouts.LayoutProps{
-		Stylesheet: "./experience.css",
-		Title:      "Experience",
+		Title: "Experience",
+		Stylesheets: []string{
+			"experience.css",
+		},
 	}) {
 		<div class="experience">
 			<header class="header">

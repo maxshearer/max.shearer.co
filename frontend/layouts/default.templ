@@ -1,0 +1,89 @@
+package layouts
+
+import (
+	"fmt"
+	"max.shearer.co/frontend"
+	"max.shearer.co/frontend/components"
+	"os"
+)
+
+type LayoutProps struct {
+	Title       string
+	Stylesheets []string
+}
+
+templ Default(props LayoutProps) {
+	{{
+		goEnv := os.Getenv("GO_ENV")
+		title := props.Title
+
+		if title == "" {
+			title = "Max Shearer - Designer and full(ish)-stack developer"
+		}
+	}}
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>{ title }</title>
+			<meta name="description" content="Professional web tinkerer for over 15 years. Currently having fun with React Native, Go, Supabase and all the other shiny AI things that are in fashion at the moment."/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<meta property="og:image" content="/images/facebook-image.png"/>
+			<meta property="twitter:image" content="/images/twitter-image.png"/>
+			<meta property="twitter:card" content="summary_large_image"/>
+			@frontend.RequireCSS("styles/main.css")
+			@frontend.RequireCSS("layouts/default.css")
+			for _, stylesheet := range props.Stylesheets {
+				@frontend.RequireCSS(fmt.Sprintf("pages/%s", stylesheet))
+			}
+			if goEnv == "development" {
+				<script type="module" src="http://localhost:5173/@vite/client"></script>
+				// <script type="module" src="http://localhost:5173/src/scripts/main.ts"></script>
+			}
+		</head>
+		<body>
+			<div class="container">
+				<div class="rainbow">
+					<div class="base"></div>
+					<div class="color"></div>
+					<div class="blend"></div>
+					<div class="noise"></div>
+				</div>
+				<div class="default">
+					<main class="main">
+						{ children... }
+					</main>
+					<section class="work">
+						@components.WorkItem(components.WorkItemProps{
+							Label:    "Waywise: an AI-generated travel guidebook for iOS",
+							Filename: "waywise",
+							Width:    1000,
+							Height:   600,
+							AltText:  "Three mobile phone mockups with Waywise travel app displayed",
+						})
+						@components.WorkItem(components.WorkItemProps{
+							Label:    "Yard Poker: texas hold&rsquo;em poker app for friends",
+							Filename: "yard-poker",
+							Width:    1000,
+							Height:   600,
+							AltText:  "Mockup of a laptop displaying the Yard Poker web app",
+						})
+						@components.WorkItem(components.WorkItemProps{
+							Label:    "Think Shape: fashion app empowering people to buy less and buy better",
+							Filename: "think-shape",
+							Width:    1000,
+							Height:   600,
+							AltText:  "Scattered iPhone mockups displaying various screens of the Think Shape app",
+						})
+						@components.WorkItem(components.WorkItemProps{
+							Label:    "Rest Easy Radio for Premier Inn: 24-hour restful sounds from the British countryside",
+							Filename: "premier-inn",
+							Width:    1000,
+							Height:   600,
+							AltText:  "Mockup of a laptop displaying the Premier Inn Rest Easy Radio website",
+						})
+					</section>
+				</div>
+			</div>
+		</body>
+	</html>
+}

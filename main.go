@@ -7,7 +7,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
-	"max.shearer.co/src/pages"
+	"max.shearer.co/frontend/pages"
 )
 
 func main() {
@@ -15,12 +15,26 @@ func main() {
 	r.Use(middleware.Compress(6))
 
 	// Serve static files from the public directory
-	fileServer := http.FileServer(http.Dir("public"))
-	r.Get("/public/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	staticAssetsServer := http.FileServer(http.Dir("static"))
+	viteAssetsServer := http.FileServer(http.Dir("dist"))
+	r.Get("/static/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
-		http.StripPrefix("/public/", fileServer).ServeHTTP(w, r)
+		http.StripPrefix("/static/", staticAssetsServer).ServeHTTP(w, r)
+	}))
+	r.Get("/styles/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+		viteAssetsServer.ServeHTTP(w, r)
+	}))
+	r.Get("/images/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+		viteAssetsServer.ServeHTTP(w, r)
+	}))
+	r.Get("/fonts/*", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+		viteAssetsServer.ServeHTTP(w, r)
 	}))
 
+	r.Get("/", templ.Handler(pages.Index()).ServeHTTP)
 	r.Get("/", templ.Handler(pages.Index()).ServeHTTP)
 	r.Get("/experience", templ.Handler(pages.Experience()).ServeHTTP)
 

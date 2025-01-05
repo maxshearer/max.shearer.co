@@ -8,7 +8,7 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "max.shearer.co/src/layouts"
+import "max.shearer.co/frontend/layouts"
 
 func Experience() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -43,28 +43,30 @@ func Experience() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"experience\"><header class=\"header\"><a href=\"/\">&larr;<span class=\"sr-only\">Back</span></a><h1>Experience</h1></header><dl><div><dt><span>2016 &rarr;</span> now: AFEW, London</dt><dd>Co-founder, creative/technical developer</dd></div><div><dt><span>2022 &rarr; 2023:</span> Tradegraft, London</dt><dd>Co-founder, lead developer</dd></div><div><dt><span>2013 &rarr; 2016:</span> Tui media, London</dt><dd>Senior UI developer</dd></div><div><dt><span>2011 &rarr; 2012:</span> Branded3, Leeds</dt><dd>Designer/developer</dd></div><div><dt><span>2007 &rarr; 2010:</span> Leeds Metropolitan University</dt><dd>BSc Multimedia Technology</dd></div><div><dt><span>2006 &rarr; 2007:</span> 2Cs Communications, Ipswich</dt><dd>Web developer</dd></div></dl><h2>Skills</h2><dl><div><dt>Design</dt><dd><ul><li>Figma</li><li>Sketch</li><li>Photoshop</li><li>Illustrator</li><li>Lightroom</li></ul></dd></div><div><dt>Frontend</dt><dd><ul><li>HTML</li><li>CSS</li><li>JavaScript/TypeScript</li><li>Vue.js/Nuxt</li><li>React/Next.js</li><li>Svelte/SvelteKit</li></ul></dd></div><div><dt>Backend</dt><dd><ul><li>Go</li><li>Node.js</li><li>PostgreSQL</li><li>MongoDB</li><li>Firebase</li><li>Redis</li></ul></dd></div><div><dt>Infra</dt><dd><ul><li>Google Cloud:")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(" ")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `src/pages/experience.templ`, Line: 100, Col: 26}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `frontend/pages/experience.templ`, Line: 102, Col: 26}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<ul><li>Cloud Run</li><li>Cloud Build</li><li>Cloud Functions</li><li>Cloud Storage</li><li>Stripe</li></ul></li></ul></dd></div><div><dt>Mobile</dt><dd><ul><li>React Native</li><li>Expo</li><li>RevenueCat</li></ul></dd></div></dl></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return templ_7745c5c3_Err
 		})
 		templ_7745c5c3_Err = layouts.Default(layouts.LayoutProps{
-			Stylesheet: "./experience.css",
-			Title:      "Experience",
+			Title: "Experience",
+			Stylesheets: []string{
+				"experience.css",
+			},
 		}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err

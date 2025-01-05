@@ -1,2 +1,10 @@
+generate:
+	templ generate
+
 watch:
-	templ generate --watch --proxy="http://localhost:8080" --cmd="go run ."
+	GO_ENV=development templ generate --watch --cmd="go run ."
+
+build:
+	templ generate && \
+		pnpm run build && \
+		go build .
