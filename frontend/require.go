@@ -34,7 +34,7 @@ func RequireCSS(path string) templ.Component {
 	}
 
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) error {
-		_, err := io.WriteString(w, fmt.Sprintf(`<link rel="stylesheet" href="%s">`, url))
+		_, err := io.WriteString(w, fmt.Sprintf(`<link class="page-stylesheet" rel="stylesheet" href="%s">`, url))
 		return err
 	})
 }

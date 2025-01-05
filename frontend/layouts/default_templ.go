@@ -48,7 +48,7 @@ func Default(props LayoutProps) templ.Component {
 		if title == "" {
 			title = "Max Shearer - Designer and full(ish)-stack developer"
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><title>")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -61,7 +61,7 @@ func Default(props LayoutProps) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><meta name=\"description\" content=\"Professional web tinkerer for over 15 years. Currently having fun with React Native, Go, Supabase and all the other shiny AI things that are in fashion at the moment.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta property=\"og:image\" content=\"/images/facebook-image.png\"><meta property=\"twitter:image\" content=\"/images/twitter-image.png\"><meta property=\"twitter:card\" content=\"summary_large_image\">")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -80,12 +80,12 @@ func Default(props LayoutProps) templ.Component {
 			}
 		}
 		if goEnv == "development" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script type=\"module\" src=\"http://localhost:5173/@vite/client\"></script> ")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</head><body><div class=\"container\"><div class=\"rainbow\"><div class=\"base\"></div><div class=\"color\"></div><div class=\"blend\"></div><div class=\"noise\"></div></div><div class=\"default\"><main class=\"main\">")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 4)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -93,7 +93,7 @@ func Default(props LayoutProps) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</main><section class=\"work\">")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 5)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -137,7 +137,7 @@ func Default(props LayoutProps) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</section></div></div></body></html>")
+		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 6)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

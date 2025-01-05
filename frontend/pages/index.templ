@@ -24,7 +24,7 @@ templ Index() {
 			<nav class="nav">
 				<ul>
 					<li>
-						<a href="/experience">👨‍💻&nbsp; Experience</a>
+						<a href="/experience" hx-get="/experience" hx-target="#main" hx-swap="outerHTML" hx-select="#main" hx-push-url="true">👨‍💻&nbsp; Experience</a>
 					</li>
 					<li>
 						<a href="mailto:max@shearer.co">👋&nbsp; Say hi</a>

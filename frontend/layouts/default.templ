@@ -39,6 +39,8 @@ templ Default(props LayoutProps) {
 				<script type="module" src="http://localhost:5173/@vite/client"></script>
 				// <script type="module" src="http://localhost:5173/src/scripts/main.ts"></script>
 			}
+			<script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/htmx-ext-head-support@2.0.1/head-support.js"></script>
 		</head>
 		<body>
 			<div class="container">
@@ -49,7 +51,7 @@ templ Default(props LayoutProps) {
 					<div class="noise"></div>
 				</div>
 				<div class="default">
-					<main class="main">
+					<main class="main" id="main">
 						{ children... }
 					</main>
 					<section class="work">

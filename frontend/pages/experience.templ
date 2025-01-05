@@ -4,14 +4,14 @@ import "max.shearer.co/frontend/layouts"
 
 templ Experience() {
 	@layouts.Default(layouts.LayoutProps{
-		Title: "Experience",
+		Title: "Experience - Max Shearer",
 		Stylesheets: []string{
 			"experience.css",
 		},
 	}) {
 		<div class="experience">
 			<header class="header">
-				<a href="/">
+				<a href="/" hx-get="/" hx-target="#main" hx-swap="outerHTML" hx-select="#main" hx-push-url="true">
 					&larr;<span class="sr-only">Back</span>
 				</a>
 				<h1>Experience</h1>
