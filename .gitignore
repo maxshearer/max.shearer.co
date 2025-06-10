@@ -25,6 +25,7 @@ dist-ssr
 
 # Templ
 *_templ.txt
+*_templ.go
 
 ./tmp
 max.shearer.co
