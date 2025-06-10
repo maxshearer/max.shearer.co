@@ -35,7 +35,6 @@ func main() {
 	}))
 
 	r.Get("/", templ.Handler(pages.Index()).ServeHTTP)
-	r.Get("/", templ.Handler(pages.Index()).ServeHTTP)
 	r.Get("/experience", templ.Handler(pages.Experience()).ServeHTTP)
 
 	http.ListenAndServe(":8080", r)
