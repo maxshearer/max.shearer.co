@@ -1,74 +1,75 @@
 .experience {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.25rem;
-  max-width: 75ch;
-
-  & h1,
-  & h2 {
-    font-size: 1.5rem;
-  }
-
-  & h2 {
-    margin-top: 1rem;
-  }
-
-  & dl {
     display: flex;
     flex-direction: column;
-  }
+    row-gap: 0.25rem;
+    max-width: 75ch;
 
-  & dl div {
-    display: inline;
-    padding: 0.5rem 0;
-
-    &:not(:first-child) {
-      border-top: 1px solid rgba(0 0 0 / 0.1);
+    & h1,
+    & h2 {
+        font-size: 1rem;
+        font-weight: 400;
     }
-  }
 
-  & dt,
-  & dd {
-    display: inline;
-    font-size: 0.875rem;
-    letter-spacing: 0.01em;
-  }
+    & h2 {
+        margin-top: 1rem;
+    }
 
-  & dt::after {
-    content: "—";
-  }
+    & dl {
+        display: flex;
+        flex-direction: column;
+    }
 
-  & dt span {
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -0.05em;
-    opacity: 0.875;
-  }
+    & dl div {
+        display: inline;
+        padding: 0.5rem 0;
 
-  & ul {
-    display: inline;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+        &:not(:first-child) {
+            border-top: 1px solid rgba(0 0 0 / 0.05);
+        }
+    }
 
-  & li {
-    display: inline;
-    letter-spacing: 0.01em;
-  }
+    & dt,
+    & dd {
+        display: inline;
+        font-size: 0.875rem;
+        letter-spacing: 0.01em;
+    }
 
-  & li:not(:last-child)::after {
-    content: ", ";
-  }
-}
+    & dt {
+        margin-right: 0.5rem;
+        color: var(--foreground-secondary);
+    }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-left: -1.5rem;
+    & dt span {
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.05em;
+    }
 
-  & a {
-    font-weight: 700;
-  }
+    & ul {
+        display: inline;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    & li {
+        display: inline;
+        letter-spacing: 0.01em;
+    }
+
+    & li:not(:last-child)::after {
+        content: ", ";
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: -1.5rem;
+
+        & a {
+            text-decoration: none;
+        }
+    }
 }
