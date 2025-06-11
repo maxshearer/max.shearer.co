@@ -2,7 +2,7 @@ generate:
 	templ generate
 
 watch:
-	GO_ENV=development templ generate --watch --cmd="go run ."
+	GO_ENV=development templ generate --watch --cmd="air ."
 
 build:
 	templ generate && \
