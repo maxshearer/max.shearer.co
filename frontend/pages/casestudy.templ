@@ -1,0 +1,31 @@
+package pages
+
+import (
+	"max.shearer.co/casestudies"
+	"max.shearer.co/frontend/layouts"
+)
+
+type CaseStudyProps struct {
+	CaseStudy casestudies.CaseStudy
+}
+
+templ CaseStudy(casestudy CaseStudyProps) {
+	@layouts.Default(layouts.LayoutProps{
+		Title: "Case Study - Max Shearer",
+		Stylesheets: []string{
+			"casestudy.css",
+		},
+	}) {
+		<h1>{ casestudy.CaseStudy.Title }</h1>
+		<p>{ casestudy.CaseStudy.Strapline }</p>
+		for _, block := range casestudy.CaseStudy.Content {
+			<p>{ block.Element }</p>
+			switch block.Type {
+				case casestudies.TextBlockType:
+					<p>{ block.Text }</p>
+				case casestudies.ImageBlockType:
+					<img src={ block.URL } alt={ block.AltText }/>
+			}
+		}
+	}
+}

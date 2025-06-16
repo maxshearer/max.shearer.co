@@ -1,0 +1,19 @@
+{
+  "id": "waywise",
+  "title": "Waywise",
+  "strapline": "an AI-generated travel guidebook for iOS",
+  "content": [
+    {
+      "type": "text",
+      "element": "h2",
+      "content": "Overview"
+    },
+    {
+      "type": "image",
+      "url": "https://placehold.com/600x400",
+      "layout": {
+        "full_width": true
+      }
+    }
+  ]
+}

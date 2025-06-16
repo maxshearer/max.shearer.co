@@ -1,12 +1,14 @@
 package main
 
 import (
+	"errors"
 	"net/http"
 
 	"github.com/a-h/templ"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
+	"max.shearer.co/casestudies"
 	"max.shearer.co/frontend/pages"
 )
 
@@ -36,6 +38,27 @@ func main() {
 
 	r.Get("/", templ.Handler(pages.Index()).ServeHTTP)
 	r.Get("/experience", templ.Handler(pages.Experience()).ServeHTTP)
+	r.Get("/work/{id}", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		id := chi.URLParam(r, "id")
+
+		cs, err := casestudies.Get(id)
+		if err != nil {
+			if errors.As(err, &casestudies.ErrNotFound{}) {
+				http.NotFound(w, r)
+			} else {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+			}
+			return
+		}
+
+		// Populate the CaseStudyProps for the template
+		caseStudy := pages.CaseStudyProps{
+			CaseStudy: *cs,
+		}
+
+		// Render the case study page
+		templ.Handler(pages.CaseStudy(caseStudy)).ServeHTTP(w, r)
+	}))
 
 	http.ListenAndServe(":8080", r)
 }
