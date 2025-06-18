@@ -5,6 +5,21 @@
     row-gap: 5vw;
     padding-inline: var(--gutter);
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: calc(var(--space) * 1.25);
+        max-width: 75ch;
+        margin-inline: auto;
+
+        & p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+            text-wrap: pretty;
+        }
+    }
+
     & h1 {
         font-size: 2.5rem;
         letter-spacing: -0.02em;
@@ -14,21 +29,6 @@
         & a {
             text-underline-offset: 0.075em;
         }
-    }
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    row-gap: calc(var(--space) * 1.25);
-    max-width: 75ch;
-    margin-inline: auto;
-
-    & p {
-        font-size: 1.1rem;
-        line-height: 1.4;
-        letter-spacing: 0.01em;
-        text-wrap: pretty;
     }
 }
 

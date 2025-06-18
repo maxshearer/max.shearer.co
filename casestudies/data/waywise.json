@@ -1,19 +1,66 @@
 {
   "id": "waywise",
-  "title": "Waywise",
+  "name": "Waywise",
   "strapline": "an AI-generated travel guidebook for iOS",
+  "link": "#",
+  "title": "Waywise: AI-powered travel guides for independent travellers",
   "content": [
     {
       "type": "text",
-      "element": "h2",
-      "content": "Overview"
+      "element": "p",
+      "class": "lede",
+      "text": "Most digital travel tools focus on bookings and reviews. The traditional guidebook market is underserved in the space and I wanted to provide a modern alternative, to create a tool that puts essential information directly into the hands of the traveller."
     },
     {
-      "type": "image",
-      "url": "https://placehold.com/600x400",
-      "layout": {
-        "full_width": true
-      }
+      "type": "text",
+      "element": "p",
+      "class": "lede",
+      "text": "There were three main product goals: building a back end that could generate and serve a travel guidebook for any city in minutes, ensuring the generated content was high-quality and genuinely useful, and delivering a polished, offline-ready iOS app."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "Building for scale"
+    },
+    {
+      "type": "text",
+      "element": "h3",
+      "text": "Pivoting from a niche idea"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "I broke the project down into a few key stages. The app started life as a much smaller, language-focused tool. I realised the bigger opportunity was to build a full travel guide, but the principle remained the same: start with a solid foundation."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "Given this was a completely new product built from scratch — I decided to focus entirely on the core guide generation engine and the four main content categories: transport, money, language, and neighbourhoods. I wanted a solid, functioning AI pipeline in place before I layered more complex features like subscriptions or user accounts on top."
+    },
+    {
+      "type": "text",
+      "element": "h3",
+      "text": "Piecing the engine together"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "A key challenge was ensuring the quality and accuracy of the AI-generated content. Relying on a single large language model (LLM) for everything could be expensive and sometimes produced inconsistent output or factual errors. When dealing with practical travel advice, reliability is critical."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "This wasn't a problem for a simple language app — but it was a dealbreaker for a comprehensive guide. I worked on engineering a hybrid system that was more robust. I used a combination of GPT-4o for its strength in creating well-written, narrative text, and Llama 3.1 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "The final product"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "After a year of development and several iterations, the result is a well-performing baseline. The foundational AI system for generating guides is in place, and the app is live on the App Store. This allows me to gather valuable feedback, continue to refine the AI, and start to introduce other core features to the experience."
     }
   ]
 }

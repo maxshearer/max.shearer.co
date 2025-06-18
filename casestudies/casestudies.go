@@ -8,10 +8,11 @@ import (
 
 type CaseStudy struct {
 	ID           string         `json:"id"`
-	Title        string         `json:"title"`
+	Name         string         `json:"name"`
 	Strapline    string         `json:"strapline"`
 	ThumbnailURL string         `json:"thumbnail_url"`
 	HeroImageURL string         `json:"hero_image_url"`
+	Title        string         `json:"title"`
 	Content      []ContentBlock `json:"content"`
 }
 

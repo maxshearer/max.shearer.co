@@ -16,16 +16,28 @@ templ CaseStudy(casestudy CaseStudyProps) {
 			"casestudy.css",
 		},
 	}) {
-		<h1>{ casestudy.CaseStudy.Title }</h1>
-		<p>{ casestudy.CaseStudy.Strapline }</p>
-		for _, block := range casestudy.CaseStudy.Content {
-			<p>{ block.Element }</p>
-			switch block.Type {
-				case casestudies.TextBlockType:
-					<p>{ block.Text }</p>
-				case casestudies.ImageBlockType:
-					<img src={ block.URL } alt={ block.AltText }/>
-			}
-		}
+		<div class="casestudy">
+			<div class="content">
+				<p class="eyebrow">Case study</p>
+				<h1>{ casestudy.CaseStudy.Title }</h1>
+				for _, block := range casestudy.CaseStudy.Content {
+					switch block.Type {
+						case casestudies.TextBlockType:
+							switch block.Element {
+								case "h1":
+									<h1>{ block.Text }</h1>
+								case "h2":
+									<h2>{ block.Text }</h2>
+								case "h3":
+									<h3>{ block.Text }</h3>
+								case "p":
+									<p class={ block.Class }>{ block.Text }</p>
+							}
+						case casestudies.ImageBlockType:
+							<img src={ block.URL } alt={ block.AltText }/>
+					}
+				}
+			</div>
+		</div>
 	}
 }
