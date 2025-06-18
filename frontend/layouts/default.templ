@@ -3,13 +3,13 @@ package layouts
 import (
 	"fmt"
 	"max.shearer.co/frontend"
-	"max.shearer.co/frontend/components"
 	"os"
 )
 
 type LayoutProps struct {
 	Title       string
 	Stylesheets []string
+	PageID      string
 }
 
 templ Default(props LayoutProps) {
@@ -18,7 +18,7 @@ templ Default(props LayoutProps) {
 		title := props.Title
 
 		if title == "" {
-			title = "Max Shearer - Designer and full(ish)-stack developer"
+			title = "Max Shearer - Designer engineer"
 		}
 	}}
 	<!DOCTYPE html>
@@ -39,8 +39,6 @@ templ Default(props LayoutProps) {
 				<script type="module" src="http://localhost:5173/@vite/client"></script>
 				// <script type="module" src="http://localhost:5173/src/scripts/main.ts"></script>
 			}
-			<script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
-			<script src="https://unpkg.com/htmx-ext-head-support@2.0.1/head-support.js"></script>
 		</head>
 		<body>
 			<div class="container">
@@ -51,39 +49,44 @@ templ Default(props LayoutProps) {
 					<div class="noise"></div>
 				</div>
 				<div class="default">
+					<header class="header">
+						if props.PageID == "index" {
+							<div class="header__title">
+								<h1 class="header__name">Max Shearer</h1>
+								<p class="header__subtitle">Design engineer</p>
+							</div>
+						} else {
+							<div class="header__title">
+								<p class="header__name"><a href="/">Max Shearer</a></p>
+								<p class="header__subtitle">Design engineer</p>
+							</div>
+						}
+						<nav class="nav">
+							<ul>
+								<li>
+									if props.PageID == "experience" {
+										<span>Experience</span>
+									} else {
+										<a href="/experience">Experience</a>
+									}
+								</li>
+								<li>
+									<a href="mailto:max@shearer.co">Say hello</a>
+								</li>
+								<li>
+									<a href="https://www.github.com/maxshearer">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8067 0C6.05299 0 0.593262 5.49998 0.593262 12.3042C0.593262 17.7432 4.0915 22.3472 8.94448 23.9767C9.55122 24.0992 9.77347 23.7119 9.77347 23.3862C9.77347 23.1009 9.75347 22.1232 9.75347 21.1044C6.35599 21.8379 5.64849 19.6377 5.64849 19.6377C5.10249 18.2117 4.29349 17.8452 4.29349 17.8452C3.1815 17.0914 4.37449 17.0914 4.37449 17.0914C5.60799 17.1729 6.25524 18.3544 6.25524 18.3544C7.34698 20.2284 9.10622 19.6989 9.81397 19.3729C9.91497 18.5784 10.2387 18.0284 10.5825 17.7229C7.87273 17.4377 5.02174 16.3784 5.02174 11.6522C5.02174 10.3077 5.50674 9.20774 6.27524 8.35222C6.15399 8.04672 5.72924 6.78347 6.39674 5.09273C6.39674 5.09273 7.42798 4.76673 9.75322 6.35573C10.7487 6.08639 11.7754 5.94938 12.8067 5.94823C13.838 5.94823 14.8892 6.09098 15.86 6.35573C18.1855 4.76673 19.2167 5.09273 19.2167 5.09273C19.8842 6.78347 19.4592 8.04672 19.338 8.35222C20.1267 9.20774 20.5917 10.3077 20.5917 11.6522C20.5917 16.3784 17.7407 17.4172 15.0107 17.7229C15.4557 18.1099 15.8397 18.8432 15.8397 20.0044C15.8397 21.6544 15.8197 22.9787 15.8197 23.3859C15.8197 23.7119 16.0422 24.0992 16.6487 23.9769C21.5017 22.3469 24.9999 17.7432 24.9999 12.3042C25.0199 5.49998 19.5402 0 12.8067 0Z" fill="#44222E"></path>
+										</svg>
+										<span class="sr-only">GitHub</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
 					<main class="main" id="main">
 						{ children... }
 					</main>
-					<section class="work">
-						@components.WorkItem(components.WorkItemProps{
-							Label:    "Waywise: an AI-generated travel guidebook for iOS",
-							Filename: "waywise",
-							Width:    1000,
-							Height:   600,
-							AltText:  "Three mobile phone mockups with Waywise travel app displayed",
-						})
-						@components.WorkItem(components.WorkItemProps{
-							Label:    "Yard Poker: texas hold&rsquo;em poker app for friends",
-							Filename: "yard-poker",
-							Width:    1000,
-							Height:   600,
-							AltText:  "Mockup of a laptop displaying the Yard Poker web app",
-						})
-						@components.WorkItem(components.WorkItemProps{
-							Label:    "Think Shape: fashion app empowering people to buy less and buy better",
-							Filename: "think-shape",
-							Width:    1000,
-							Height:   600,
-							AltText:  "Scattered iPhone mockups displaying various screens of the Think Shape app",
-						})
-						@components.WorkItem(components.WorkItemProps{
-							Label:    "Rest Easy Radio for Premier Inn: 24-hour restful sounds from the British countryside",
-							Filename: "premier-inn",
-							Width:    1000,
-							Height:   600,
-							AltText:  "Mockup of a laptop displaying the Premier Inn Rest Easy Radio website",
-						})
-					</section>
 				</div>
 			</div>
 		</body>

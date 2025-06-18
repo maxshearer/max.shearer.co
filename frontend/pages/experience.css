@@ -1,22 +1,40 @@
 .experience {
     display: flex;
     flex-direction: column;
-    row-gap: 0.25rem;
-    max-width: 75ch;
+    align-items: center;
+    row-gap: var(--gutter);
+    padding-inline: var(--gutter);
+
+    & > div {
+        width: 100%;
+        max-width: 75ch;
+    }
 
     & h1,
     & h2 {
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        text-wrap: balance;
+        text-wrap: pretty;
     }
 
     & h2 {
         margin-top: 1rem;
     }
 
+    & p {
+        margin-top: calc(var(--space) * 0.25);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+        text-wrap: pretty;
+    }
+
     & dl {
         display: flex;
         flex-direction: column;
+        margin-top: calc(var(--space) * 0.5);
     }
 
     & dl div {
@@ -37,7 +55,9 @@
 
     & dt {
         margin-right: 0.5rem;
-        color: var(--foreground-secondary);
+        font-weight: 500;
+        font-family: var(--display-stack);
+        color: var(--foreground);
     }
 
     & dt span {

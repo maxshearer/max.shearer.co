@@ -1,4 +1,36 @@
 @font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("/static/fonts/BricolageGrotesque-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("/static/fonts/BricolageGrotesque-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("/static/fonts/BricolageGrotesque-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("/static/fonts/BricolageGrotesque-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Inter Display";
     src: url("/static/fonts/InterDisplay-Regular.woff2") format("woff2");
     font-weight: 400;

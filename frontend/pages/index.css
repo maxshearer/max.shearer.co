@@ -1,107 +1,48 @@
-.page {
+.index {
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    align-items: center;
+    row-gap: 5vw;
+    padding-inline: var(--gutter);
+
+    & h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        text-wrap: pretty;
+
+        & a {
+            text-underline-offset: 0.075em;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--space) * 1.25);
     max-width: 75ch;
+    margin-inline: auto;
 
     & p {
+        font-size: 1.1rem;
         line-height: 1.4;
         letter-spacing: 0.01em;
         text-wrap: pretty;
     }
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
+.work {
+    display: grid;
+    gap: var(--gutter);
+    max-width: 100ch;
 
-.name {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-.subtitle {
-    color: var(--foreground-secondary);
-
-    & a {
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-        text-decoration-thickness: 0.075em;
-        text-decoration-color: var(--foreground-underline);
-
-        &:hover {
-            text-decoration-color: var(--foreground);
-            color: var(--foreground);
-        }
-    }
-}
-
-.social,
-.nav {
-    & ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-
-        @media (min-width: 768px) {
-            justify-content: flex-start;
-        }
+    & img {
+        width: 100%;
+        height: auto;
     }
 
-    & li {
-    }
-
-    & a,
-    & button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: var(--foreground);
-
-        &:focus-visible {
-            outline: 0.25rem solid rgba(0 0 0 / 0.1);
-            box-shadow: none;
-        }
-
-        & span {
-            text-decoration: underline;
-            text-decoration-color: var(--foreground-underline);
-            text-underline-offset: 0.2em;
-            text-decoration-thickness: 0.075em;
-        }
-
-        &:hover span {
-            text-decoration-color: var(--foreground);
-        }
-
-        & svg {
-            fill: var(--foreground-secondary);
-            width: 1rem;
-            height: 1rem;
-        }
-
-        &:hover svg {
-            fill: var(--foreground);
-        }
-    }
-}
-
-.social {
-    & ul {
-        gap: 0.5rem;
-    }
-}
-
-.nav {
-    & ul {
-        gap: 0.75rem;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
