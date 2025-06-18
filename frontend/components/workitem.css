@@ -1,7 +1,8 @@
 .work-item {
+    position: relative;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0 0 0 / 0.033);
+    background-color: oklch(0.6 0.05 359.05 / 0.05);
     border-radius: 0.75rem;
     overflow: hidden;
 
@@ -10,16 +11,52 @@
         display: block;
         order: 2;
     }
+
+    & a {
+        text-decoration: none;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            inset: 0;
+        }
+    }
+
+    & svg {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 0.75rem;
+        height: 0.75rem;
+
+        & path {
+            stroke-width: 0.075em;
+            stroke: var(--foreground-secondary);
+        }
+    }
+
+    &:hover {
+        & .work-item__caption p {
+            color: var(--foreground);
+        }
+
+        path {
+            stroke: var(--foreground);
+        }
+    }
 }
 
 .work-item__caption {
     order: 1;
     padding-top: 1rem;
-    padding-inline: 1rem;
+    padding-right: 4.5rem;
+    padding-left: 1rem;
 
     & p {
         font-size: 0.875rem;
-        font-weight: 500;
-        color: rgba(0 0 0 / 0.33);
+        color: var(--foreground-secondary);
+        text-wrap: pretty;
     }
 }

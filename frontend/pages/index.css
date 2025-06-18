@@ -4,6 +4,7 @@
     align-items: center;
     row-gap: 5vw;
     padding-inline: var(--gutter);
+    padding-bottom: var(--gutter);
 
     .content {
         display: flex;

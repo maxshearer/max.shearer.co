@@ -6,6 +6,7 @@ import (
 )
 
 type WorkItemProps struct {
+	ID       string
 	Label    string
 	Filename string
 	Width    int
@@ -15,6 +16,7 @@ type WorkItemProps struct {
 
 templ WorkItem(props WorkItemProps) {
 	{{
+		url := templ.SafeURL(fmt.Sprintf("/work/%s", props.ID))
 		label := html.UnescapeString(props.Label)
 	}}
 	<figure class="work-item">
@@ -23,7 +25,10 @@ templ WorkItem(props WorkItemProps) {
 			<img src={ fmt.Sprintf("/static/images/%s.png", props.Filename) } alt={ props.AltText } width={ fmt.Sprintf("%d", props.Width) } height={ fmt.Sprintf("%d", props.Height) }/>
 		</picture>
 		<figcaption class="work-item__caption">
-			<p>{ label }</p>
+			<p><a href={ url }>{ label }</a></p>
 		</figcaption>
+		<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1.56448 19.7986L19.5645 1.79865M19.5645 1.79865H8.56448M19.5645 1.79865V12.7986" stroke="black" stroke-width="2"></path>
+		</svg>
 	</figure>
 }
