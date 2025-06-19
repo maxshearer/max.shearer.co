@@ -22,13 +22,13 @@
     row-gap: calc(var(--space) * 0.125);
     padding: var(--space) var(--gutter);
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         grid-template-columns: 1fr auto;
     }
 }
 
 .header__title {
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         display: flex;
     }
 }
@@ -64,7 +64,7 @@
     gap: calc(var(--space) * 0.75);
     list-style: none outside;
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         justify-content: start;
         gap: var(--space);
     }
@@ -74,7 +74,7 @@
     font-weight: 300;
     font-size: 1.25rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         font-size: 1.1rem;
     }
 }
@@ -150,7 +150,7 @@
     opacity: 0.7;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     .base,
     .color,
     .blend {
