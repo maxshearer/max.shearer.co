@@ -11,10 +11,6 @@
     overflow: auto;
 }
 
-.main {
-    margin-top: 5vw;
-}
-
 .header {
     display: grid;
     justify-content: center;

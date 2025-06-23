@@ -50,9 +50,7 @@
 
 .work-item__caption {
     order: 1;
-    padding-top: 1rem;
-    padding-right: 4.5rem;
-    padding-left: 1rem;
+    padding: 1rem 4.5rem 0 1rem;
 
     & p {
         font-size: 0.875rem;

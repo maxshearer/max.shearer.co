@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     row-gap: 5vw;
-    padding-inline: var(--gutter);
-    padding-bottom: var(--gutter);
+    margin-block-start: 5vw;
+    padding: 0 var(--gutter) var(--gutter);
 
     .content {
         display: flex;

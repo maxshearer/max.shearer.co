@@ -1,7 +1,9 @@
 package pages
 
 import (
+	"fmt"
 	"max.shearer.co/casestudies"
+	"max.shearer.co/frontend/components"
 	"max.shearer.co/frontend/layouts"
 )
 
@@ -17,26 +19,45 @@ templ CaseStudy(casestudy CaseStudyProps) {
 		},
 	}) {
 		<div class="casestudy">
-			<div class="content">
-				<p class="eyebrow">Case study</p>
-				<h1>{ casestudy.CaseStudy.Title }</h1>
-				for _, block := range casestudy.CaseStudy.Content {
-					switch block.Type {
-						case casestudies.TextBlockType:
-							switch block.Element {
-								case "h1":
-									<h1>{ block.Text }</h1>
-								case "h2":
-									<h2>{ block.Text }</h2>
-								case "h3":
-									<h3>{ block.Text }</h3>
-								case "p":
-									<p class={ block.Class }>{ block.Text }</p>
-							}
-						case casestudies.ImageBlockType:
-							<img src={ block.URL } alt={ block.AltText }/>
+			<div class="hero">
+				<picture>
+					<source srcset={ fmt.Sprintf("/static/images/%s.avif", casestudy.CaseStudy.ID) } type="image/avif"/>
+					<img src={ fmt.Sprintf("/static/images/%s.png", casestudy.CaseStudy.ID) } alt=""/>
+				</picture>
+			</div>
+			<div class="body">
+				<div class="content">
+					<p class="eyebrow">Case study</p>
+					<h1>{ casestudy.CaseStudy.Title }</h1>
+					<ul class="responsibilities">
+						for _, responsibility := range casestudy.CaseStudy.Responsibilities {
+							@components.Responsibility(components.ResponsibilityProps{
+								Name:     responsibility.Name,
+								Category: string(responsibility.Category),
+							})
+						}
+					</ul>
+					for _, block := range casestudy.CaseStudy.Content {
+						switch block.Type {
+							case casestudies.TextBlockType:
+								switch block.Element {
+									case "h1":
+										<h1>{ block.Text }</h1>
+									case "h2":
+										<h2>{ block.Text }</h2>
+									case "h3":
+										<h3>{ block.Text }</h3>
+									case "p":
+										<p class={ block.Class }>{ block.Text }</p>
+								}
+							case casestudies.ImageBlockType:
+								<img src={ block.URL } alt={ block.AltText }/>
+						}
 					}
-				}
+					<div class="showcase">
+						<a href={ templ.SafeURL(casestudy.CaseStudy.Link) } class="button">Download from the App Store</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	}

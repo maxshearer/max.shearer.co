@@ -1,3 +1,5 @@
+@import "@evilmartians/harmony/css/index.css";
 @import "./fonts.css";
 @import "./global.css";
 @import "../components/workitem.css";
+@import "../components/responsibility.css";

@@ -1,0 +1,39 @@
+.responsibility {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.25em 0.675em;
+    border: 1px solid rgba(0 0 0 / 0.1);
+    border-radius: 2em;
+
+    .bullet {
+        display: block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 0.5em;
+    }
+}
+
+.responsibility--design .bullet {
+    background-color: var(--orange-500);
+}
+
+.responsibility--frontend .bullet {
+    background-color: var(--emerald-500);
+}
+
+.responsibility--backend .bullet {
+    background-color: var(--sky-500);
+}
+
+.responsibility--mobile .bullet {
+    background-color: var(--violet-500);
+}
+
+.responsibility--infrastructure .bullet {
+    background-color: var(--rose-500);
+}
+
+.responsibility--ai .bullet {
+    background-color: var(--yellow-500);
+}

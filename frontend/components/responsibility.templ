@@ -1,0 +1,18 @@
+package components
+
+import (
+	"fmt"
+	"strings"
+)
+
+type ResponsibilityProps struct {
+	Name     string
+	Category string
+}
+
+templ Responsibility(props ResponsibilityProps) {
+	<li class={ fmt.Sprintf("responsibility responsibility--%s", strings.ToLower(props.Category)) }>
+		<span class="bullet"></span>
+		{ props.Name }
+	</li>
+}

@@ -7,13 +7,15 @@ import (
 )
 
 type CaseStudy struct {
-	ID           string         `json:"id"`
-	Name         string         `json:"name"`
-	Strapline    string         `json:"strapline"`
-	ThumbnailURL string         `json:"thumbnail_url"`
-	HeroImageURL string         `json:"hero_image_url"`
-	Title        string         `json:"title"`
-	Content      []ContentBlock `json:"content"`
+	ID               string           `json:"id"`
+	Name             string           `json:"name"`
+	Strapline        string           `json:"strapline"`
+	ThumbnailURL     string           `json:"thumbnail_url"`
+	HeroImageURL     string           `json:"hero_image_url"`
+	Link             string           `json:"link"`
+	Title            string           `json:"title"`
+	Content          []ContentBlock   `json:"content"`
+	Responsibilities []Responsibility `json:"responsibilities"`
 }
 
 type ContentBlockType string
@@ -21,6 +23,22 @@ type ContentBlockType string
 const (
 	TextBlockType  ContentBlockType = "text"
 	ImageBlockType ContentBlockType = "image"
+)
+
+type Responsibility struct {
+	Name     string                 `json:"name"`
+	Category ResponsibilityCategory `json:"category"`
+}
+
+type ResponsibilityCategory string
+
+var (
+	ResponsibilityCategoryDesign   ResponsibilityCategory = "Design"
+	ResponsibilityCategoryFrontend ResponsibilityCategory = "Frontend"
+	ResponsibilityCategoryBackend  ResponsibilityCategory = "Backend"
+	ResponsibilityCategoryMobile   ResponsibilityCategory = "Mobile"
+	ResponsibilityCategoryInfra    ResponsibilityCategory = "Infra"
+	ResponsibilityCategoryAI       ResponsibilityCategory = "AI"
 )
 
 type ContentBlock struct {

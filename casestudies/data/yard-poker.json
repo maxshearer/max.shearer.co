@@ -1,9 +1,8 @@
 {
-  "id": "waywise",
-  "name": "Waywise",
-  "strapline": "an AI-generated travel guidebook for iOS",
-  "link": "https://apps.apple.com/gb/app/travel-guidebooks-waywise/id6476279831",
-  "title": "Waywise: AI-powered travel guides for independent travellers",
+  "id": "yard-poker",
+  "name": "Yard Poker",
+  "strapline": "a COVID-necessitated poker app for friends",
+  "title": "Yard: a COVID-necessitated poker app for friends",
   "content": [
     {
       "type": "text",

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-block-start: 5vw;
     row-gap: var(--gutter);
     padding-inline: var(--gutter);
 
@@ -20,11 +21,11 @@
     }
 
     & h2 {
-        margin-top: 1rem;
+        margin-block-start: 1rem;
     }
 
     & p {
-        margin-top: calc(var(--space) * 0.25);
+        margin-block-start: calc(var(--space) * 0.25);
         font-size: 1.1rem;
         line-height: 1.4;
         letter-spacing: 0.01em;
@@ -34,7 +35,7 @@
     & dl {
         display: flex;
         flex-direction: column;
-        margin-top: calc(var(--space) * 0.5);
+        margin-block-start: calc(var(--space) * 0.5);
     }
 
     & dl div {
@@ -76,6 +77,10 @@
     & li {
         display: inline;
         letter-spacing: 0.01em;
+
+        & span + ul {
+            margin-left: 0.25rem;
+        }
     }
 
     & li:not(:last-child)::after {
@@ -86,7 +91,7 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        margin-left: -1.5rem;
+        margin-inline-start: -1.5rem;
 
         & a {
             text-decoration: none;
