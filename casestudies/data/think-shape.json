@@ -9,58 +9,53 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "Most digital travel tools focus on bookings and reviews. The traditional guidebook market is underserved in the space and I wanted to provide a modern alternative, to create a tool that puts essential information directly into the hands of the traveller."
+      "text": "Renowned fashion stylist Anna Berkeley wanted to scale her 25 years of expertise and make her unique styling method accessible to a global audience. Her manual process, honed through her work with Selfridges and the Financial Times, was proven but limited in its reach."
     },
     {
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "There were three main product goals: building a back end that could generate and serve a travel guidebook for any city in minutes, ensuring the generated content was high-quality and genuinely useful, and delivering a polished, offline-ready iOS app."
+      "text": "On behalf of the agency I co-founded, we were brought on to translate her proven methodology into a scalable, user-friendly mobile app. The goal was to build a digital product that could codify her knowledge, guide users through a personal measurement process, and deliver bespoke clothing recommendations, ultimately creating a new commercial venture for her brand."
     },
     {
       "type": "text",
       "element": "h2",
-      "text": "Building for scale"
-    },
-    {
-      "type": "text",
-      "element": "h3",
-      "text": "Pivoting from a niche idea"
+      "text": "Analogue to algorithm"
     },
     {
       "type": "text",
       "element": "p",
-      "text": "I broke the project down into a few key stages. The app started life as a much smaller, language-focused tool. I realised the bigger opportunity was to build a full travel guide, but the principle remained the same: start with a solid foundation."
+      "text": "The first and most critical challenge was to deconstruct and digitize Anna's deep, nuanced understanding of body shapes and clothing styles. This began with a series of intensive workshops to map out her entire system, which existed primarily in a complex Excel spreadsheet and her own experience."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "Given this was a completely new product built from scratch — I decided to focus entirely on the core guide generation engine and the four main content categories: transport, money, language, and neighbourhoods. I wanted a solid, functioning AI pipeline in place before I layered more complex features like subscriptions or user accounts on top."
-    },
-    {
-      "type": "text",
-      "element": "h3",
-      "text": "Piecing the engine together"
+      "text": "We worked closely with Anna to transcribe her logic into a detailed specification. This involved converting decades of styling intuition into a clear set of programmable rules that would form the core algorithm of the application. This foundational work was essential to ensure the app's recommendations would be genuinely authentic to her method."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "A key challenge was ensuring the quality and accuracy of the AI-generated content. Relying on a single large language model (LLM) for everything could be expensive and sometimes produced inconsistent output or factual errors. When dealing with practical travel advice, reliability is critical."
+      "text": "With the logic defined, we designed and built the technical architecture to support it. The core algorithm was developed as a high-performance API using Go, chosen for its speed and efficiency in handling the complex calculations."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "This wasn't a problem for a simple language app — but it was a dealbreaker for a comprehensive guide. I worked on engineering a hybrid system that was more robust. I used a combination of GPT-4o for its strength in creating well-written, narrative text, and Llama 3.1 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
+      "text": "For the app itself, we used React Native to deliver a consistent, polished experience across both iOS and Android from a single codebase. A key decision was to power the entire system with a headless CMS. This decouples the content from the presentation, empowering the Think Shape team to update styling advice, add new clothing types, and manage all in-app text without requiring developer intervention."
     },
     {
       "type": "text",
       "element": "h2",
-      "text": "The final product"
+      "text": "Impact"
     },
     {
       "type": "text",
       "element": "p",
-      "text": "After a year of development and several iterations, the result is a well-performing baseline. The foundational AI system for generating guides is in place, and the app is live on the App Store. This allows me to gather valuable feedback, continue to refine the AI, and start to introduce other core features to the experience."
+      "text": "The result is a highly-rated app on iOS and Android that successfully translates a world-class stylist’s brain into a scalable digital product, now serving thousands of monthly active users. The Go API reliably executes the core logic, while the headless CMS gives the client full control over their content."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "We delivered a robust, commercially successful platform that not only met the client's vision but also provided a flexible foundation for future growth. The project stands as a strong example of our agency's ability to handle complex client requirements and transform a non-technical, expert-led service into a thriving digital business."
     }
   ],
   "responsibilities": [
@@ -77,7 +72,7 @@
       "category": "Backend"
     },
     {
-      "name": "PostgreSQL",
+      "name": "MongoDB",
       "category": "Backend"
     },
     {
@@ -87,14 +82,6 @@
     {
       "name": "Google Cloud Run",
       "category": "Infrastructure"
-    },
-    {
-      "name": "OpenAI GPT-4.1",
-      "category": "AI"
-    },
-    {
-      "name": "Meta Llama 3.2",
-      "category": "AI"
     }
   ]
 }

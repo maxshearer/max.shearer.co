@@ -8,58 +8,53 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "Most digital travel tools focus on bookings and reviews. The traditional guidebook market is underserved in the space and I wanted to provide a modern alternative, to create a tool that puts essential information directly into the hands of the traveller."
+      "text": "During the COVID-19 lockdowns, weekly poker nights with friends moved online. The experience was always clunky—a combination of a dated online poker platform and a separate Zoom call running in the background. It felt disconnected and lacked the seamless social interaction of a real poker game."
     },
     {
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "There were three main product goals: building a back end that could generate and serve a travel guidebook for any city in minutes, ensuring the generated content was high-quality and genuinely useful, and delivering a polished, offline-ready iOS app."
+      "text": "This clear personal pain point sparked an idea for a new product. The goal was to design and build a modern, integrated poker application that combined clean gameplay with native video chat, creating a single, elegant environment for a social game night."
     },
     {
       "type": "text",
       "element": "h2",
-      "text": "Building for scale"
-    },
-    {
-      "type": "text",
-      "element": "h3",
-      "text": "Pivoting from a niche idea"
+      "text": "Design, branding and backend"
     },
     {
       "type": "text",
       "element": "p",
-      "text": "I broke the project down into a few key stages. The app started life as a much smaller, language-focused tool. I realised the bigger opportunity was to build a full travel guide, but the principle remained the same: start with a solid foundation."
+      "text": "I approached this as a full-stack personal project, tackling the user experience from the visual design right down to the core game logic."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "Given this was a completely new product built from scratch — I decided to focus entirely on the core guide generation engine and the four main content categories: transport, money, language, and neighbourhoods. I wanted a solid, functioning AI pipeline in place before I layered more complex features like subscriptions or user accounts on top."
-    },
-    {
-      "type": "text",
-      "element": "h3",
-      "text": "Piecing the engine together"
+      "text": "The first step was to solve the core user experience problem. I designed several generations of high-fidelity mockups, focusing on a clean, intuitive interface that put social interaction at the forefront. The designs integrated player video feeds directly into the table, creating a more personal and engaging atmosphere than the existing solutions."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "A key challenge was ensuring the quality and accuracy of the AI-generated content. Relying on a single large language model (LLM) for everything could be expensive and sometimes produced inconsistent output or factual errors. When dealing with practical travel advice, reliability is critical."
+      "text": "To give the app a unique identity, I designed a complete, custom deck of playing cards and brand assets. This was an exercise in creating a cohesive and visually appealing aesthetic that felt modern and distinct from the generic look of many online poker platforms."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "This wasn't a problem for a simple language app — but it was a dealbreaker for a comprehensive guide. I worked on engineering a hybrid system that was more robust. I used a combination of GPT-4o for its strength in creating well-written, narrative text, and Llama 3.1 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
+      "text": "With the design established, I built the backend engine in Go. This engine was the functional heart of the game, responsible for managing the entire game state: shuffling and dealing cards, handling player actions like bets and folds, and determining the winner of each hand."
     },
     {
       "type": "text",
       "element": "h2",
-      "text": "The final product"
+      "text": "Proof of concept"
     },
     {
       "type": "text",
       "element": "p",
-      "text": "After a year of development and several iterations, the result is a well-performing baseline. The foundational AI system for generating guides is in place, and the app is live on the App Store. This allows me to gather valuable feedback, continue to refine the AI, and start to introduce other core features to the experience."
+      "text": "The project resulted in a fully designed user experience, a unique brand identity, and a functional backend engine capable of running a complete poker game."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "As lockdowns lifted and regular life resumed, the personal need that sparked the project naturally dissolved. The project therefore served its purpose as a deep dive into game development and user experience design, successfully proving the concept of a more integrated and modern poker app. It stands as a strong demonstration of my skills in UI/UX design, branding, and backend engineering with Go."
     }
   ],
   "responsibilities": [
@@ -68,32 +63,8 @@
       "category": "Design"
     },
     {
-      "name": "React Native",
-      "category": "Mobile"
-    },
-    {
       "name": "Go",
       "category": "Backend"
-    },
-    {
-      "name": "PostgreSQL",
-      "category": "Backend"
-    },
-    {
-      "name": "Docker",
-      "category": "Infrastructure"
-    },
-    {
-      "name": "Google Cloud Run",
-      "category": "Infrastructure"
-    },
-    {
-      "name": "OpenAI GPT-4.1",
-      "category": "AI"
-    },
-    {
-      "name": "Meta Llama 3.2",
-      "category": "AI"
     }
   ]
 }
