@@ -13,7 +13,7 @@ type CaseStudyProps struct {
 
 templ CaseStudy(casestudy CaseStudyProps) {
 	@layouts.Default(layouts.LayoutProps{
-		Title: "Case Study - Max Shearer",
+		Title: fmt.Sprintf("%s - Max Shearer", casestudy.CaseStudy.Name),
 		Stylesheets: []string{
 			"casestudy.css",
 		},
@@ -54,9 +54,11 @@ templ CaseStudy(casestudy CaseStudyProps) {
 								<img src={ block.URL } alt={ block.AltText }/>
 						}
 					}
-					<div class="showcase">
-						<a href={ templ.SafeURL(casestudy.CaseStudy.Link) } class="button">Download from the App Store</a>
-					</div>
+					if (casestudy.CaseStudy.Link != "") {
+						<div class="showcase">
+							<a href={ templ.SafeURL(casestudy.CaseStudy.Link) } class="button">Download from the App Store</a>
+						</div>
+					}
 				</div>
 			</div>
 		</div>
