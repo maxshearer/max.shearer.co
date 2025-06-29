@@ -1,0 +1,92 @@
+{
+  "id": "tradegraft",
+  "name": "Tradegraft",
+  "strapline": "connecting construction sites with verified operators",
+  "title": "Tradegraft: connecting construction sites with verified operators",
+  "hero_image_url": "/static/images/tradegraft-hero",
+  "thumbnail_url": "/static/images/tradegraft",
+  "content": [
+    {
+      "type": "text",
+      "element": "p",
+      "class": "lede",
+      "text": "The construction industry has long relied on slow, traditional recruitment methods, making it difficult for site managers to find qualified workers quickly. As a co-founder of Tradegraft, we set out to solve this by building a two-sided marketplace to directly connect skilled operators with construction sites."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "class": "lede",
+      "text": "Our key differentiator was a real-time qualification validation system, made possible through an exclusive partnership with the country's largest machinery accreditor. The product consisted of two web platforms—one for operators and one for site managers—powered by a single backend. My role covered branding, UX design, and all backend development."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "Setting the foundations"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "To solve the \"chicken-and-egg\" problem inherent in any marketplace, we focused on supply first. We secured a partnership with a major plant company to seed the platform with jobs, which saw a few hundred operators sign up within the first few weeks. With this foundation, I designed the user flows for both platforms, focusing on simplicity and trust. The goal was to build a core product that solved the primary problem for both parties."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "Challenges along the way"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "The biggest technical challenge was our core promise: real-time qualification validation. For site managers, trust is everything."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "As the backend developer, my task was to build a robust and reliable wrapper around this system. I architected and built a service in Go that could handle the complex communication, process the inconsistent data, and link a verified status to an operator's profile in our Postgres database. On the UX side, this was presented as a clear \"Verified\" badge system, building instant trust for site managers at a glance."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "The outcome"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "We successfully designed, built, and launched the full Tradegraft platform. The real-time validation feature worked as designed and became our most powerful selling point, directly addressing a major industry pain point. Our initial strategy proved effective, attracting hundreds of operators quickly."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "Ultimately, despite the technical success of the product, the startup didn't achieve product-market fit, and we made the difficult decision to wind the company down. While the business venture concluded, the project itself was a success in product delivery. It demonstrates my ability to own a product from multiple angles—brand, design, and complex backend engineering—and to navigate the real-world challenges of building a startup from idea to a fully functional marketplace."
+    }
+  ],
+  "responsibilities": [
+    {
+      "name": "Product design",
+      "category": "Design"
+    },
+    {
+      "name": "Branding",
+      "category": "Design"
+    },
+    {
+      "name": "Go",
+      "category": "Backend"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Backend"
+    },
+    {
+      "name": "Docker",
+      "category": "Infrastructure"
+    },
+    {
+      "name": "Google Cloud Run",
+      "category": "Infrastructure"
+    },
+    {
+      "name": "Firebase",
+      "category": "Infrastructure"
+    }
+  ]
+}
