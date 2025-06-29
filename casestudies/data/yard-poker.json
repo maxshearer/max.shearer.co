@@ -3,6 +3,8 @@
   "name": "Yard Poker",
   "strapline": "a COVID-necessitated poker app for friends",
   "title": "Yard: a COVID-necessitated poker app for friends",
+  "hero_image_url": "/static/images/yard-poker-hero",
+  "thumbnail_url": "/static/images/yard-poker",
   "content": [
     {
       "type": "text",

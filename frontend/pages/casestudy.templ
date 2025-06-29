@@ -21,8 +21,8 @@ templ CaseStudy(casestudy CaseStudyProps) {
 		<div class="casestudy">
 			<div class="hero">
 				<picture>
-					<source srcset={ fmt.Sprintf("/static/images/%s.avif", casestudy.CaseStudy.ID) } type="image/avif"/>
-					<img src={ fmt.Sprintf("/static/images/%s.png", casestudy.CaseStudy.ID) } alt=""/>
+					<source srcset={ fmt.Sprintf("%s.avif", casestudy.CaseStudy.HeroImageURL) } type="image/avif"/>
+					<img src={ fmt.Sprintf("%s.png", casestudy.CaseStudy.HeroImageURL) } alt={ fmt.Sprintf("Screenshots of %s", casestudy.CaseStudy.Name) }/>
 				</picture>
 			</div>
 			<div class="body">
