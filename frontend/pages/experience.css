@@ -5,6 +5,7 @@
     margin-block-start: 5vw;
     row-gap: var(--gutter);
     padding-inline: var(--gutter);
+    padding-bottom: calc(var(--gutter) * 2);
 
     & > div {
         width: 100%;

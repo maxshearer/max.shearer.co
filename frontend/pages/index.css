@@ -4,7 +4,7 @@
     align-items: center;
     row-gap: 5vw;
     margin-block-start: 5vw;
-    padding: 0 var(--gutter) var(--gutter);
+    padding: 0 var(--gutter) calc(var(--gutter) * 2);
 
     .content {
         display: flex;
