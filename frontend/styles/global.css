@@ -81,7 +81,7 @@ p {
     text-decoration: none;
 
     &:hover {
-        background-color: var(--fuchsia-600);
+        background-color: var(--rose-800);
     }
 }
 
