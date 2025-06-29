@@ -55,6 +55,12 @@
       "text": "This wasn't a problem for a simple language app — but it was a dealbreaker for a comprehensive guide. I worked on engineering a hybrid system that was more robust. I used a combination of GPT-4o for its strength in creating well-written, narrative text, and Llama 3.1 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
     },
     {
+      "type": "image",
+      "layout": "overflow",
+      "url": "/static/images/waywise/elements.png",
+      "alt": "UI elements and assets designed for the Waywise product"
+    },
+    {
       "type": "text",
       "element": "h2",
       "text": "The final product"

@@ -11,13 +11,34 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "Renowned fashion stylist Anna Berkeley wanted to scale her 25 years of expertise and make her unique styling method accessible to a global audience. Her manual process, honed through her work with Selfridges and the Financial Times, was proven but limited in its reach."
+      "text": "Many people struggle to find clothes that truly fit their body shape, leading to frustrating shopping experiences and wardrobes full of unworn items. The goal of Think Shape was to solve this by digitising the 28 years of expertise of its founder, professional fashion stylist Anna Berkeley."
     },
     {
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "On behalf of the agency I co-founded, we were brought on to translate her proven methodology into a scalable, user-friendly mobile app. The goal was to build a digital product that could codify her knowledge, guide users through a personal measurement process, and deliver bespoke clothing recommendations, ultimately creating a new commercial venture for her brand."
+      "text": "My role on this project was end-to-end, covering the initial product design—including UX and wireframing—and the subsequent development. This involved building the mobile app itself using React Native, whilst also developing the backend and the core algorithm that powers the recommendations."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "The process"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "Before any code was written, the first priority was to establish a firm user experience. We started with an intensive product design phase, where I worked closely with the client to translate her nuanced 'Body Map' styling process into a clear, logical user journey."
+    },
+    {
+      "type": "image",
+      "layout": "overflow",
+      "url": "/static/images/think-shape/wireframes.png",
+      "alt": "Wireframes of the Think Shape app"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "This involved several rounds of low-fidelity wireframing to map out every step, from initial sign-up to the final recommendations. The main focus was on the measurement process—we knew this would be the biggest hurdle for users. We iterated on a guided, step-by-step flow to make it as simple and foolproof as possible. This design phase was crucial, as it gave us a solid blueprint and de-risked the subsequent development work."
     },
     {
       "type": "text",
@@ -27,22 +48,12 @@
     {
       "type": "text",
       "element": "p",
-      "text": "The first and most critical challenge was to deconstruct and digitize Anna's deep, nuanced understanding of body shapes and clothing styles. This began with a series of intensive workshops to map out her entire system, which existed primarily in a complex Excel spreadsheet and her own experience."
+      "text": "With the UX blueprint signed off, development began on two parallel streams. I built the front-end mobile application using React Native, which allowed us to target both iOS and Android from a single codebase efficiently. The app was built to spec from the approved wireframes, with a strong focus on creating a polished, intuitive interface."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "We worked closely with Anna to transcribe her logic into a detailed specification. This involved converting decades of styling intuition into a clear set of programmable rules that would form the core algorithm of the application. This foundational work was essential to ensure the app's recommendations would be genuinely authentic to her method."
-    },
-    {
-      "type": "text",
-      "element": "p",
-      "text": "With the logic defined, we designed and built the technical architecture to support it. The core algorithm was developed as a high-performance API using Go, chosen for its speed and efficiency in handling the complex calculations."
-    },
-    {
-      "type": "text",
-      "element": "p",
-      "text": "For the app itself, we used React Native to deliver a consistent, polished experience across both iOS and Android from a single codebase. A key decision was to power the entire system with a headless CMS. This decouples the content from the presentation, empowering the Think Shape team to update styling advice, add new clothing types, and manage all in-app text without requiring developer intervention."
+      "text": "Simultaneously, I developed the backend and the core algorithm. This was the brains of the operation, where I codified the founder's styling rules into a logical programme. It was designed to take a user's measurements, calculate their unique body shape, and generate the corresponding clothing and style recommendations. This dual-stream process allowed us to build the user-facing app whilst perfecting the complex logic that powered it."
     },
     {
       "type": "text",
@@ -52,12 +63,12 @@
     {
       "type": "text",
       "element": "p",
-      "text": "The result is a highly-rated app on iOS and Android that successfully translates a world-class stylist’s brain into a scalable digital product, now serving thousands of monthly active users. The Go API reliably executes the core logic, while the headless CMS gives the client full control over their content."
+      "text": "The project resulted in the successful launch of the Think Shape app on both the App Store and Google Play. By prioritising the user experience design upfront, we created an app that successfully guides users through the potentially difficult task of taking their own measurements."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "We delivered a robust, commercially successful platform that not only met the client's vision but also provided a flexible foundation for future growth. The project stands as a strong example of our agency's ability to handle complex client requirements and transform a non-technical, expert-led service into a thriving digital business."
+      "text": "The final product is a polished, cross-platform application built on a robust backend. This case study demonstrates my ability to manage the full product lifecycle, from initial concept and UX design, through to full-stack implementation with React Native and a custom backend algorithm."
     }
   ],
   "responsibilities": [

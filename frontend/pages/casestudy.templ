@@ -51,7 +51,14 @@ templ CaseStudy(casestudy CaseStudyProps) {
 										<p class={ block.Class }>{ block.Text }</p>
 								}
 							case casestudies.ImageBlockType:
-								<img src={ block.URL } alt={ block.AltText }/>
+								switch block.Layout {
+									case "full":
+										<img src={ block.URL } alt={ block.AltText } class="image-block image-block--full"/>
+									case "overflow":
+										<img src={ block.URL } alt={ block.AltText } class="image-block image-block--overflow"/>
+									default:
+										<img src={ block.URL } alt={ block.AltText } class="image-block"/>
+								}
 						}
 					}
 					if (casestudy.CaseStudy.Link != "") {

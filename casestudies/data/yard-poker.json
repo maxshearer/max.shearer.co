@@ -39,6 +39,12 @@
       "text": "To give the app a unique identity, I designed a complete, custom deck of playing cards and brand assets. This was an exercise in creating a cohesive and visually appealing aesthetic that felt modern and distinct from the generic look of many online poker platforms."
     },
     {
+      "type": "image",
+      "layout": "full",
+      "url": "/static/images/yard-poker/cards.png",
+      "alt": "Playing card designs for the Yard Poker app"
+    },
+    {
       "type": "text",
       "element": "p",
       "text": "With the design established, I built the backend engine in Go. This engine was the functional heart of the game, responsible for managing the entire game state: shuffling and dealing cards, handling player actions like bets and folds, and determining the winner of each hand."

@@ -42,19 +42,14 @@ var (
 )
 
 type ContentBlock struct {
-	Type    ContentBlockType `json:"type"`
-	Element string           `json:"element"`
-	Class   string           `json:"class"`
-	Text    string           `json:"text"`
-	URL     string           `json:"url"`
-	AltText string           `json:"alt_text"`
-	Layout  Layout           `json:"layout"`
-}
-
-type Layout struct {
-	FullWidth bool `json:"full_width"`
-	Width     int  `json:"width"`
-	Height    int  `json:"height"`
+	Type            ContentBlockType `json:"type"`
+	Element         string           `json:"element"`
+	Class           string           `json:"class"`
+	Text            string           `json:"text"`
+	Layout          string           `json:"layout"`
+	URL             string           `json:"url"`
+	BackgroundColor string           `json:"background_color"`
+	AltText         string           `json:"alt_text"`
 }
 
 type ErrNotFound struct{}

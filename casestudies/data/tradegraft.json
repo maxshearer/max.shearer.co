@@ -44,6 +44,12 @@
       "text": "As the backend developer, my task was to build a robust and reliable wrapper around this system. I architected and built a service in Go that could handle the complex communication, process the inconsistent data, and link a verified status to an operator's profile in our Postgres database. On the UX side, this was presented as a clear \"Verified\" badge system, building instant trust for site managers at a glance."
     },
     {
+      "type": "image",
+      "layout": "overflow",
+      "url": "/static/images/tradegraft/pr-assets.png",
+      "alt": "Marketing assets designed for the Tradegraft product"
+    },
+    {
       "type": "text",
       "element": "h2",
       "text": "The outcome"
