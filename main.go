@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"log"
 	"net/http"
 
 	"github.com/a-h/templ"
@@ -60,5 +61,8 @@ func main() {
 		templ.Handler(pages.CaseStudy(caseStudy)).ServeHTTP(w, r)
 	}))
 
-	http.ListenAndServe(":8080", r)
+	log.Println("Server started on port 8080")
+	if err := http.ListenAndServe(":8080", r); err != nil {
+		log.Fatal(err)
+	}
 }
