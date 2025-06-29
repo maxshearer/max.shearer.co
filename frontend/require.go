@@ -30,7 +30,7 @@ func RequireCSS(path string) templ.Component {
 			log.Fatal(err)
 		}
 
-		url = viteManifest["frontend/"+path].File
+		url = "/" + viteManifest["frontend/"+path].File
 	}
 
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) error {
