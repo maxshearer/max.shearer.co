@@ -19,7 +19,6 @@ RUN pnpm install
 # The 'dist' directory will be created here.
 COPY . .
 RUN pnpm run build
-RUN test -d /app/dist || (echo "ERROR: /app/dist directory not found after 'pnpm run build'. Check your frontend build configuration (e.g., vite.config.js) and build logs." && exit 1)
 
 # =========================================================================================
 # Stage 2: Backend Builder
@@ -67,6 +66,9 @@ COPY --chown=appuser:appgroup --from=frontend-builder /app/dist ./dist
 # Copy the static assets from your project directory (e.g., images, fonts not handled by pnpm)
 # The --chown flag sets the owner of the copied files to our new non-root user
 COPY --chown=appuser:appgroup static ./static
+
+# Copy the data file across
+COPY --chown=appuser:appgroup data ./data
 
 # Copy the compiled Go binary from the 'backend-builder' stage
 COPY --chown=appuser:appgroup --from=backend-builder /server .

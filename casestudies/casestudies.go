@@ -63,8 +63,12 @@ func Get(id string) (*CaseStudy, error) {
 		return nil, errors.New("invalid ID")
 	}
 
-	// Read file contents
-	file, err := os.Open("casestudies/data/" + id + ".json")
+	wd, err := os.Getwd()
+	if err != nil {
+		return nil, err
+	}
+
+	file, err := os.Open(wd + "/data/" + id + ".json")
 	if err != nil {
 		if os.IsNotExist(err) {
 			return nil, ErrNotFound{}
