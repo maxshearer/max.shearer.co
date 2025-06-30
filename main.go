@@ -9,8 +9,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
-	"max.shearer.co/casestudies"
-	"max.shearer.co/frontend/pages"
+	"github.com/maxshearer/max.shearer.co/casestudies"
+	"github.com/maxshearer/max.shearer.co/frontend/pages"
 )
 
 func main() {
