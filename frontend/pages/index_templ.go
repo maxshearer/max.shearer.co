@@ -46,7 +46,7 @@ func Index() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"index\"><div class=\"content\"><h1>Making nice things for mobile and the web. Building <a href=\"https://waywi.se\">Waywise</a> at the moment.</h1><p>I&rsquo;ve been a professional web tinkerer for over 15 years. The technologies I&rsquo;m having the most fun with right now are React Native, Go, Supabase and all of the AI goodies that are in vogue at the moment.</p><p>Day-to-day I work as a design engineer at <a href=\"https://www.openrent.co.uk\" rel=\"nofollow\">OpenRent</a>, a property tech business changing the lettings industry for good.</p><p>In my spare time I&rsquo;m building Waywise, an AI-generated travel guidebook for iOS to allow travellers to explore cities in a more personal and socially responsible way.</p></div><section class=\"work\">")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -94,7 +94,7 @@ func Index() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</section></div>")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
