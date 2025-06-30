@@ -15,12 +15,6 @@
     },
     {
       "type": "text",
-      "element": "p",
-      "class": "lede",
-      "text": "My role on this project was end-to-end, covering the initial product design, including UX and wireframing as well as the subsequent development. This involved building the mobile app itself using React Native, whilst also developing the backend and the core algorithm that powers the recommendations."
-    },
-    {
-      "type": "text",
       "element": "h2",
       "text": "The process"
     },
