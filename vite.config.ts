@@ -1,15 +1,16 @@
 import { defineConfig } from "vite";
 import { globSync } from "glob";
+import path from "path";
 
 export default defineConfig({
   build: {
     manifest: true,
     rollupOptions: {
       input: globSync([
-        "./frontend/scripts/main.ts",
-        "./frontend/styles/main.css",
-        "./frontend/layouts/**/*.css",
-        "./frontend/pages/**/*.css",
+        path.resolve(__dirname, "./frontend/scripts/main.ts"),
+        path.resolve(__dirname, "./frontend/styles/main.css"),
+        path.resolve(__dirname, "./frontend/layouts/**/*.css"),
+        path.resolve(__dirname, "./frontend/pages/**/*.css"),
       ]),
       output: {
         assetFileNames(chunkInfo) {
