@@ -10,13 +10,13 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "The construction industry has long relied on slow, traditional recruitment methods, making it difficult for site managers to find qualified workers quickly. As a co-founder of Tradegraft, we set out to solve this by building a two-sided marketplace to directly connect skilled operators with construction sites."
+      "text": "The construction industry has long relied on slow, traditional recruitment methods, making it difficult for site managers to find qualified workers quickly. As a co-founder of Tradegraft, I set out to solve this by building a two-sided marketplace to directly connect skilled operators with construction sites."
     },
     {
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "Our key differentiator was a real-time qualification validation system, made possible through an exclusive partnership with the country's largest machinery accreditor. The product consisted of two web platforms—one for operators and one for site managers—powered by a single backend. My role covered branding, UX design, and all backend development."
+      "text": "Our key differentiator was a real-time qualification validation system, made possible through an exclusive partnership with the country's largest machinery accreditor. The product consisted of two web platforms: one for operators and one for site managers, both powered by a single backend. My role covered branding, UX design, and all backend development."
     },
     {
       "type": "text",
@@ -41,7 +41,7 @@
     {
       "type": "text",
       "element": "p",
-      "text": "As the backend developer, my task was to build a robust and reliable wrapper around this system. I architected and built a service in Go that could handle the complex communication, process the inconsistent data, and link a verified status to an operator's profile in our Postgres database. On the UX side, this was presented as a clear \"Verified\" badge system, building instant trust for site managers at a glance."
+      "text": "As the backend developer, my task was to build a robust and reliable wrapper around this system. I architected and built a service in Go that could handle the complex communication, process the inconsistent data, and link a verified status to an operator's profile in our Postgres database."
     },
     {
       "type": "image",
@@ -57,12 +57,12 @@
     {
       "type": "text",
       "element": "p",
-      "text": "We successfully designed, built, and launched the full Tradegraft platform. The real-time validation feature worked as designed and became our most powerful selling point, directly addressing a major industry pain point. Our initial strategy proved effective, attracting hundreds of operators quickly."
+      "text": "We successfully designed, built, and launched the full Tradegraft platform inside six months. The real-time validation feature worked as designed and became our most powerful selling point, directly addressing a major industry pain point. Our initial strategy proved effective, attracting hundreds of operators quickly."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "Ultimately, despite the technical success of the product, the startup didn't achieve product-market fit, and we made the difficult decision to wind the company down. While the business venture concluded, the project itself was a success in product delivery. It demonstrates my ability to own a product from multiple angles—brand, design, and complex backend engineering—and to navigate the real-world challenges of building a startup from idea to a fully functional marketplace."
+      "text": "Ultimately, despite the technical success of the product, the startup struggled to achieve product-market fit, and we made the difficult decision to wind the company down. While the business venture concluded, the project itself was a success in product delivery. It was a fulfilling experience to own a product from multiple angles: brand, design, and complex backend engineering, and to navigate the real-world challenges of building a startup from idea to a fully functional marketplace."
     }
   ],
   "responsibilities": [
