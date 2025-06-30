@@ -19,6 +19,7 @@ RUN pnpm install
 # The 'dist' directory will be created here.
 COPY . .
 RUN pnpm run build
+RUN test -d /app/dist || (echo "ERROR: /app/dist directory not found after 'pnpm run build'. Check your frontend build configuration (e.g., vite.config.js) and build logs." && exit 1)
 
 # =========================================================================================
 # Stage 2: Backend Builder
