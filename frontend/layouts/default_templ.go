@@ -46,7 +46,7 @@ func Default(props LayoutProps) templ.Component {
 		title := props.Title
 
 		if title == "" {
-			title = "Max Shearer - Design engineer"
+			title = "Max Shearer - Digital product engineer"
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><title>")
 		if templ_7745c5c3_Err != nil {
@@ -90,12 +90,12 @@ func Default(props LayoutProps) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if props.PageID == "index" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"header__title\"><h1 class=\"header__name\">Max Shearer</h1><p class=\"header__subtitle\">Design engineer</p></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"header__title\"><h1 class=\"header__name\">Max Shearer</h1><p class=\"header__subtitle\">Digital product engineer</p></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"header__title\"><p class=\"header__name\"><a href=\"/\">Max Shearer</a></p><p class=\"header__subtitle\">Design engineer</p></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"header__title\"><p class=\"header__name\"><a href=\"/\">Max Shearer</a></p><p class=\"header__subtitle\">Digital product engineer</p></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
