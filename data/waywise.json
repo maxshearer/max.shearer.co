@@ -11,13 +11,7 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "Most digital travel tools focus on bookings and reviews. The traditional guidebook market is underserved in the space and I wanted to provide a modern alternative, to create a tool that puts essential information directly into the hands of the traveller."
-    },
-    {
-      "type": "text",
-      "element": "p",
-      "class": "lede",
-      "text": "There were three main product goals: building a back end that could generate and serve a travel guidebook for any city in minutes, ensuring the generated content was high-quality and genuinely useful, and delivering a polished, offline-ready iOS app."
+      "text": "Most digital travel tools focus on bookings and reviews. The traditional guidebook market is underserved in the space and I wanted to provide a modern alternative, to create a tool that puts essential information directly into the hands of the traveller. I had three main product goals: building a back end that could generate and serve a travel guidebook for any city in minutes, ensuring the generated content was high-quality and genuinely useful, and delivering a polished, offline-ready iOS app."
     },
     {
       "type": "text",
@@ -32,7 +26,7 @@
     {
       "type": "text",
       "element": "p",
-      "text": "I broke the project down into a few key stages. The app started life as a much smaller, language-focused tool. I realised the bigger opportunity was to build a full travel guide, but the principle remained the same: start with a solid foundation."
+      "text": "The app started life as a much smaller, language-focused tool. I realised the bigger opportunity was to build a full travel guidebook, but the principle remained the same: start with a solid foundation. To do so I needed to break the problem down into smaller, manageable parts."
     },
     {
       "type": "text",
@@ -52,7 +46,22 @@
     {
       "type": "text",
       "element": "p",
-      "text": "This wasn't a problem for a simple language app — but it was a dealbreaker for a comprehensive guide. I worked on engineering a hybrid system that was more robust. I used a combination of GPT-4o for its strength in creating well-written, narrative text, and Llama 3.1 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
+      "text": "This wasn't a problem for a simple language app, but it was a dealbreaker for a more comprehensive guidebook. I used a combination of Llama 3 for its strength in creating well-written, narrative text, and GPT-4 for more structured, factual data extraction. This dual-model approach significantly improved the reliability and cost-effectiveness of the guide generation."
+    },
+    {
+      "type": "text",
+      "element": "h2",
+      "text": "Building a native experience"
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "I chose React Native, more specifically Expo, to build the app's front-end. This approach allowed for rapid development and, as a solo developer, provided an efficient way to build a high-quality native experience while maintaining flexibility for future expansion. The focus was on creating a clean, fast interface that feels entirely native on iOS."
+    },
+    {
+      "type": "text",
+      "element": "p",
+      "text": "A critical requirement for a travel app is offline access. Travellers can't rely on having a constant data connection. To solve this, I implemented a robust local storage system. When a user generates or unlocks a guide, the content is saved directly to their device. This ensures all their essential information, from transport maps to neighbourhood details, is available instantly; whether they're on a plane or exploring a remote part of a city."
     },
     {
       "type": "image",
@@ -78,6 +87,10 @@
     },
     {
       "name": "React Native",
+      "category": "Mobile"
+    },
+    {
+      "name": "RevenueCat",
       "category": "Mobile"
     },
     {
