@@ -61,7 +61,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 WORKDIR /app
 
 # Copy the built frontend assets from the 'frontend-builder' stage
-COPY --from=frontend-builder /app/dist ./dist
+COPY --chown=appuser:appgroup --from=frontend-builder /app/dist ./dist
 
 # Copy the static assets from your project directory (e.g., images, fonts not handled by pnpm)
 # The --chown flag sets the owner of the copied files to our new non-root user
