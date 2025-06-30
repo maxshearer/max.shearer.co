@@ -29,9 +29,6 @@ FROM golang:1.24-alpine AS backend-builder
 # Set the working directory
 WORKDIR /app
 
-# Install the 'templ' CLI for code generation
-RUN go install github.com/a-h/templ/cmd/templ@latest
-
 # Copy Go module files and download dependencies.
 # This leverages Docker's cache, so dependencies are only re-downloaded
 # when go.mod or go.sum changes.
