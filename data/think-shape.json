@@ -17,7 +17,7 @@
       "type": "text",
       "element": "p",
       "class": "lede",
-      "text": "My role on this project was end-to-end, covering the initial product design—including UX and wireframing—and the subsequent development. This involved building the mobile app itself using React Native, whilst also developing the backend and the core algorithm that powers the recommendations."
+      "text": "My role on this project was end-to-end, covering the initial product design, including UX and wireframing as well as the subsequent development. This involved building the mobile app itself using React Native, whilst also developing the backend and the core algorithm that powers the recommendations."
     },
     {
       "type": "text",
@@ -27,7 +27,7 @@
     {
       "type": "text",
       "element": "p",
-      "text": "Before any code was written, the first priority was to establish a firm user experience. We started with an intensive product design phase, where I worked closely with the client to translate her nuanced 'Body Map' styling process into a clear, logical user journey."
+      "text": "Before any code was written, the first priority was to establish a firm user experience. We started with an intensive product design phase, where I worked closely with the client to translate her nuanced body map styling process into a clear and logical user journey."
     },
     {
       "type": "image",
@@ -38,7 +38,7 @@
     {
       "type": "text",
       "element": "p",
-      "text": "This involved several rounds of low-fidelity wireframing to map out every step, from initial sign-up to the final recommendations. The main focus was on the measurement process—we knew this would be the biggest hurdle for users. We iterated on a guided, step-by-step flow to make it as simple and foolproof as possible. This design phase was crucial, as it gave us a solid blueprint and de-risked the subsequent development work."
+      "text": "We then moved on to several rounds of low-fidelity wireframing to map out every step, from initial sign-up to the final recommendations. The main focus was on the measurement process as we knew this would be the biggest hurdle for users. We iterated on a guided, step-by-step flow to make it as simple and foolproof as possible. This design phase was crucial, as it gave us a solid blueprint and de-risked the subsequent development work."
     },
     {
       "type": "text",
@@ -48,12 +48,12 @@
     {
       "type": "text",
       "element": "p",
-      "text": "With the UX blueprint signed off, development began on two parallel streams. I built the front-end mobile application using React Native, which allowed us to target both iOS and Android from a single codebase efficiently. The app was built to spec from the approved wireframes, with a strong focus on creating a polished, intuitive interface."
+      "text": "With the wireframes signed off, development began on two parallel streams. I built the front-end mobile application using Expo, which allowed us to target both iOS and Android from a single codebase efficiently. The app was built to spec from the approved wireframes, with a strong focus on creating a polished and intuitive interface."
     },
     {
       "type": "text",
       "element": "p",
-      "text": "Simultaneously, I developed the backend and the core algorithm. This was the brains of the operation, where I codified the founder's styling rules into a logical programme. It was designed to take a user's measurements, calculate their unique body shape, and generate the corresponding clothing and style recommendations. This dual-stream process allowed us to build the user-facing app whilst perfecting the complex logic that powered it."
+      "text": "Simultaneously, I developed the core algorithm. This was the brains of the operation, where I digitised Anna's styling rules into a RESTful API. It was designed to take a user's measurements, calculate their unique body shape, and generate the corresponding clothing and style recommendations. This dual-stream process allowed us to build the user-facing app whilst perfecting the complex logic that powered it."
     },
     {
       "type": "text",
@@ -68,7 +68,7 @@
     {
       "type": "text",
       "element": "p",
-      "text": "The final product is a polished, cross-platform application built on a robust backend. This case study demonstrates my ability to manage the full product lifecycle, from initial concept and UX design, through to full-stack implementation with React Native and a custom backend algorithm."
+      "text": "The Think Shape app is now live on the App Store and Google Play, serving thousands of monthly active users. I managed the project from concept to launch, which included the UX design, the React Native development, and the implementation of the core backend algorithm. I continue to serve Think Shape as a consultant."
     }
   ],
   "responsibilities": [
