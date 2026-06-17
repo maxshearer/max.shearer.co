@@ -12,8 +12,8 @@ RUN npm install -g pnpm
 
 # Copy package manager files first to leverage Docker's cache.
 # This layer is only rebuilt if these files change.
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the frontend source code and build the assets.
 # The 'dist' directory will be created here.
